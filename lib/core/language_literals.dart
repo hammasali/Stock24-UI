@@ -59,6 +59,17 @@ class En extends Language {
   static const String en_BackSide = 'Back side';
   static const String en_NextBtn = 'Next';
 
+  static const String en_GSTNum = 'GST Number';
+  static const String en_PANNum = 'PAN Number';
+  static const String en_BillingAddress = 'Billing Address';
+  static const String en_PinCode = 'Pin Code';
+
+  static const String en_City = 'City';
+  static const String en_State = 'State';
+  static const String en_Country = 'Country';
+  static const String en_Previous = 'Previous';
+
+
 
 
 }

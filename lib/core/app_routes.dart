@@ -5,6 +5,8 @@ import 'package:stock/screens/screen_2.dart';
 import 'package:stock/screens/screen_3.dart';
 import 'package:stock/screens/screen_4.dart';
 import 'package:stock/screens/screen_5.dart';
+import 'package:stock/screens/screen_6.dart';
+import 'package:stock/screens/screen_7.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings routeSettings) {
@@ -27,6 +29,13 @@ class AppRoutes {
 
         case Screen5.routeName:
           return MaterialPageRoute(builder: (_) => Screen5());
+
+        case Screen6.routeName:
+          return MaterialPageRoute(builder: (_) => Screen6());
+
+        case Screen7.routeName:
+          return MaterialPageRoute(builder: (_) => Screen7());
+
         default:
           return null;
       }

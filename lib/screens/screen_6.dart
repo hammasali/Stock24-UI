@@ -6,18 +6,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_6.dart';
+import 'package:stock/screens/screen_7.dart';
 
-class Screen5 extends StatefulWidget {
-  static const String routeName = '/screen_5';
-
-  const Screen5({Key? key}) : super(key: key);
+class Screen6 extends StatefulWidget {
+  const Screen6({Key? key}) : super(key: key);
+  static const String routeName = '/screen_6';
 
   @override
-  _Screen5State createState() => _Screen5State();
+  _Screen6State createState() => _Screen6State();
 }
 
-class _Screen5State extends State<Screen5> {
+class _Screen6State extends State<Screen6> {
   _appBar(context) => AppBar(
         backgroundColor: AppInfo.BgClr,
         elevation: 0.0,
@@ -52,7 +51,6 @@ class _Screen5State extends State<Screen5> {
       );
 
   get _progress => Container(
-        margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
         child: Column(
           children: [
             Padding(
@@ -91,21 +89,20 @@ class _Screen5State extends State<Screen5> {
                       ],
                     ),
                   ),
-                  Container(
-                    height: 22,
-                    width: 22,
-                    decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                      color: AppInfo.BgClr,
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0x29000000),
-                          offset: Offset(0, 3),
-                          blurRadius: 6,
-                        ),
-                      ],
-                    ),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.string(
+                        progress,
+                        fit: BoxFit.scaleDown,
+                        allowDrawingOutsideViewBox: true,
+                      ),
+                      SvgPicture.string(
+                        progress2,
+                        fit: BoxFit.scaleDown,
+                        allowDrawingOutsideViewBox: true,
+                      ),
+                    ],
                   ),
                   Container(
                     height: 3.0,
@@ -156,7 +153,6 @@ class _Screen5State extends State<Screen5> {
                       fontFamily: 'Roboto',
                       fontSize: 16,
                       color: AppInfo.TextClr,
-                      fontWeight: FontWeight.w500,
                     )),
                     textAlign: TextAlign.center,
                   ),
@@ -170,6 +166,7 @@ class _Screen5State extends State<Screen5> {
                       fontFamily: 'Roboto',
                       fontSize: 16,
                       color: AppInfo.TextClr,
+                      fontWeight: FontWeight.w500,
                     )),
                     textAlign: TextAlign.center,
                   ),
@@ -201,8 +198,7 @@ class _Screen5State extends State<Screen5> {
         ),
       );
 
-  get _nameField => Container(
-        margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
+  get _gstNo => Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(width: 1.0, color: AppInfo.TextClr),
@@ -226,7 +222,7 @@ class _Screen5State extends State<Screen5> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_EnterFirmName,
+            hintText: En.en_GSTNum,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -242,10 +238,8 @@ class _Screen5State extends State<Screen5> {
         ),
       );
 
-  get _contactPerson => Container(
-    margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
-    decoration: BoxDecoration(
+  get _panNo => Container(
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(width: 1.0, color: AppInfo.TextClr),
           color: AppInfo.BgClr,
@@ -268,7 +262,7 @@ class _Screen5State extends State<Screen5> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_ContactPerson,
+            hintText: En.en_PANNum,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -284,12 +278,55 @@ class _Screen5State extends State<Screen5> {
         ),
       );
 
-  get _mobileNum => Container(
-    margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
-    decoration: BoxDecoration(
-          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+  get _billingAdd => Container(
+        height: 150,
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          keyboardType: TextInputType.multiline,
+          minLines: 1,
+          //Normal textInputField will be displayed
+          maxLines: 5,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_BillingAddress,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _pinCode => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
           color: AppInfo.BgClr,
           boxShadow: [
             BoxShadow(
@@ -310,7 +347,7 @@ class _Screen5State extends State<Screen5> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_MobileNumberHint,
+            hintText: En.en_PinCode,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -326,265 +363,182 @@ class _Screen5State extends State<Screen5> {
         ),
       );
 
-  get _whatsappNum => Container(
-    margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
-    decoration: BoxDecoration(
-          border: Border.all(width: 1.0, color: AppInfo.TextClr),
-          borderRadius: BorderRadius.circular(5.0),
-          color: AppInfo.BgClr,
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x29000000),
-              offset: Offset(0, 3),
-              blurRadius: 6,
-            ),
-          ],
-        ),
-        child: TextField(
-          cursorColor: AppInfo.TextClr,
-          autofocus: false,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            focusedBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-            focusedErrorBorder: InputBorder.none,
-            disabledBorder: InputBorder.none,
-            errorBorder: InputBorder.none,
-            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_WhatsappHint,
-            hintStyle: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 18,
+  get _cityAndState => Row(
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: const Color(0x0f1b285c),
+                border: Border.all(width: 1.0, color: const Color(0x0f1b285c)),
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
-          ),
-        ),
-      );
-
-  get _emailId => Container(
-    margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
-    decoration: BoxDecoration(
-          border: Border.all(width: 1.0, color: AppInfo.TextClr),
-          borderRadius: BorderRadius.circular(5.0),
-          color: AppInfo.BgClr,
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x29000000),
-              offset: Offset(0, 3),
-              blurRadius: 6,
-            ),
-          ],
-        ),
-        child: TextField(
-          cursorColor: AppInfo.TextClr,
-          autofocus: false,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            focusedBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-            focusedErrorBorder: InputBorder.none,
-            disabledBorder: InputBorder.none,
-            errorBorder: InputBorder.none,
-            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_EmailId,
-            hintStyle: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 18,
-              ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
-          ),
-        ),
-      );
-
-  get _selectMarketingPersonal => Container(
-    margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
-    decoration: BoxDecoration(
-          border: Border.all(width: 1.0, color: AppInfo.TextClr),
-          borderRadius: BorderRadius.circular(5.0),
-          color: AppInfo.BgClr,
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x29000000),
-              offset: Offset(0, 3),
-              blurRadius: 6,
-            ),
-          ],
-        ),
-        child: TextField(
-          cursorColor: AppInfo.TextClr,
-          readOnly: true,
-          autofocus: false,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            focusedBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-            focusedErrorBorder: InputBorder.none,
-            disabledBorder: InputBorder.none,
-            errorBorder: InputBorder.none,
-            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_SelectMarketingPersonal,
-            hintStyle: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 18,
-              ),
-            ),
-            suffixIcon: Icon(
-              Icons.arrow_drop_down_outlined,
-              color: AppInfo.TextClr,
-            ),
-          ),
-        ),
-      );
-
-  get _bottom => Container(
-    margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
-    child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text.rich(
-              TextSpan(
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 18,
-                  color: AppInfo.TextClr,
-                ),
-                children: [
-                  TextSpan(
-                    text: En.en_VSCard,
+              child: TextField(
+                cursorColor: AppInfo.TextClr,
+                autofocus: false,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  enabledBorder: InputBorder.none,
+                  focusedErrorBorder: InputBorder.none,
+                  disabledBorder: InputBorder.none,
+                  errorBorder: InputBorder.none,
+                  contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                  hintText: En.en_City,
+                  hintStyle: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 18,
+                    ),
                   ),
-                  TextSpan(
-                    text: '*',
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.asterisk,
+                    color: AppInfo.AsteriskClr,
+                    size: 8,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: AppInfo.getScreenWidth(context) * 0.028,
+          ),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: const Color(0x0f1b285c),
+                border: Border.all(width: 1.0, color: const Color(0x0f1b285c)),
+              ),
+              child: TextField(
+                cursorColor: AppInfo.TextClr,
+                autofocus: false,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  enabledBorder: InputBorder.none,
+                  focusedErrorBorder: InputBorder.none,
+                  disabledBorder: InputBorder.none,
+                  errorBorder: InputBorder.none,
+                  contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                  hintText: En.en_State,
+                  hintStyle: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 18,
+                    ),
+                  ),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.asterisk,
+                    color: AppInfo.AsteriskClr,
+                    size: 8,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+
+  get _country => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: const Color(0x0f1b285c),
+          border: Border.all(width: 1.0, color: const Color(0x0f1b285c)),
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_Country,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _buttons => Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: InkWell(
+              onTap: () => Navigator.of(context).pop(),
+              child: Container(
+                padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  border: Border.all(width: 1.0, color: AppInfo.SplashBgClr),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x43ffffff),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    En.en_Previous,
                     style: TextStyle(
-                      color: AppInfo.AsteriskClr,
+                      fontFamily: 'Skia',
+                      fontSize: 22,
+                      color: AppInfo.TextClr,
                     ),
+                    textAlign: TextAlign.left,
                   ),
-                ],
+                ),
               ),
-              textHeightBehavior:
-                  TextHeightBehavior(applyHeightToFirstAscent: false),
-              textAlign: TextAlign.left,
             ),
-            SizedBox(
-              height: AppInfo.getScreenHeight(context) * 0.028,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xb2ffffff),
-                      border: Border.all(width: 1.0, color: AppInfo.TextClr),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SvgPicture.string(
-                          frontCard,
-                          fit: BoxFit.scaleDown,
-                          allowDrawingOutsideViewBox: true,
-                        ),
-                        Text(
-                          En.en_FrontSide,
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 18,
-                            color: const Color(0xff49506e),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: AppInfo.getScreenHeight(context) * 0.018,
-                ),
-                Expanded(
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xb2ffffff),
-                      border: Border.all(width: 1.0, color: AppInfo.TextClr),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SvgPicture.string(
-                          BackCard,
-                          fit: BoxFit.scaleDown,
-                          allowDrawingOutsideViewBox: true,
-                        ),
-                        Text(
-                          En.en_BackSide,
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 18,
-                            color: const Color(0xff49506e),
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-
-  get _nextBtn => InkWell(
-        onTap: () => Navigator.of(context).pushNamed(Screen6.routeName),
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-              horizontal: AppInfo.kDefaultPadding * 3,
-              vertical: AppInfo.kDefaultPadding),
-          margin: const EdgeInsets.symmetric(vertical: AppInfo.kDefaultPadding),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            color: AppInfo.SplashBgClr,
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0x43ffffff),
-                offset: Offset(0, 3),
-                blurRadius: 6,
-              ),
-            ],
           ),
-          child: Text(
-            En.en_NextBtn,
-            style: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 22,
-                color: AppInfo.SplashTxtClr,
-                fontWeight: FontWeight.w400,
+          SizedBox(
+            width: AppInfo.getScreenHeight(context) * 0.028,
+          ),
+          Expanded(
+            child: InkWell(
+              onTap: () => Navigator.of(context).pushNamed(Screen7.routeName),
+              child: Container(
+                padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: AppInfo.TextClr,
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x43ffffff),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    En.en_NextBtn,
+                    style: TextStyle(
+                      fontFamily: 'Skia',
+                      fontSize: 22,
+                      color: AppInfo.SplashTxtClr,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
               ),
             ),
-            textAlign: TextAlign.left,
           ),
-        ),
+        ],
       );
 
   @override
@@ -595,45 +549,42 @@ class _Screen5State extends State<Screen5> {
         appBar: _appBar(context),
         body: SafeArea(
           child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _progress,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.02,
-                ),
-                _nameField,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                _contactPerson,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                _mobileNum,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                _whatsappNum,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                _emailId,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                _selectMarketingPersonal,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                _bottom,
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.008,
-                ),
-                Center(
-                  child: _nextBtn,
-                )
-              ],
+            child: Container(
+              margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _progress,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.02,
+                  ),
+                  _gstNo,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _panNo,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _billingAdd,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _pinCode,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _cityAndState,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _country,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _buttons,
+                ],
+              ),
             ),
           ),
         ),

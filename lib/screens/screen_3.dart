@@ -16,6 +16,8 @@ class Screen3 extends StatelessWidget {
   get _nameField => Container(
         margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(
+          border:
+          Border.all(width: 1.0, color: AppInfo.TextClr),
           borderRadius: BorderRadius.circular(5.0),
           color: AppInfo.BgClr,
           boxShadow: [
@@ -56,6 +58,8 @@ class Screen3 extends StatelessWidget {
   get _designation => Container(
         margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(
+          border:
+          Border.all(width: 1.0, color: AppInfo.TextClr),
           borderRadius: BorderRadius.circular(5.0),
           color: AppInfo.BgClr,
           boxShadow: [
@@ -96,6 +100,8 @@ class Screen3 extends StatelessWidget {
   get _mobileNum => Container(
         margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(
+          border:
+          Border.all(width: 1.0, color: AppInfo.TextClr),
           borderRadius: BorderRadius.circular(5.0),
           color: AppInfo.BgClr,
           boxShadow: [
@@ -136,6 +142,8 @@ class Screen3 extends StatelessWidget {
   get _whatsappNum => Container(
         margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(
+          border:
+          Border.all(width: 1.0, color: AppInfo.TextClr),
           borderRadius: BorderRadius.circular(5.0),
           color: AppInfo.BgClr,
           boxShadow: [
@@ -176,6 +184,8 @@ class Screen3 extends StatelessWidget {
   get _area => Container(
         margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(
+          border:
+          Border.all(width: 1.0, color: AppInfo.TextClr),
           borderRadius: BorderRadius.circular(5.0),
           color: AppInfo.BgClr,
           boxShadow: [
@@ -286,23 +296,25 @@ class Screen3 extends StatelessWidget {
       child: Scaffold(
         appBar: _appBar(context),
         body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  _nameField,
-                  _designation,
-                  _mobileNum,
-                  _whatsappNum,
-                  _area,
-                ],
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).pushNamed(Screen4.routeName),
-                child: _saveBtn,
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    _nameField,
+                    _designation,
+                    _mobileNum,
+                    _whatsappNum,
+                    _area,
+                  ],
+                ),
+                GestureDetector(
+                  onTap: () => Navigator.of(context).pushNamed(Screen4.routeName),
+                  child: _saveBtn,
+                ),
+              ],
+            ),
           ),
         ),
       ),

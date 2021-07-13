@@ -6,6 +6,7 @@ import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
 import 'package:stock/screens/screen_3.dart';
+import 'package:stock/screens/screen_5.dart';
 
 class Screen4 extends StatelessWidget {
   static const String routeName = '/screen4';
@@ -184,7 +185,7 @@ class Screen4 extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () =>
-                            Navigator.of(context).pushNamed(Screen3.routeName),
+                            Navigator.of(context).pushNamed(Screen5.routeName),
                         child: Container(
                           padding:
                               const EdgeInsets.all(AppInfo.kDefaultPadding),

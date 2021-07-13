@@ -46,4 +46,19 @@ class En extends Language {
   static const String en_AdvanceTrader = 'Advance Trader';
   static const String en_ContactPerson = 'Contact Person';
   static const String en_MobileNumber = 'Mobile Number';
+
+  static const String en_Tittle5 = 'Add Dealers';
+  static const String en_PersonalDetails = 'Personal \nDetails';
+  static const String en_BillingDetails = 'Billing \nDetails';
+  static const String en_BankDetails = 'Bank \nDetails';
+  static const String en_EnterFirmName = 'Enter Firm Name';
+  static const String en_EmailId = 'Email Id';
+  static const String en_SelectMarketingPersonal = 'Select Marketing Personal';
+  static const String en_VSCard = 'Upload Visiting Card';
+  static const String en_FrontSide = 'Front side';
+  static const String en_BackSide = 'Back side';
+  static const String en_NextBtn = 'Next';
+
+
+
 }

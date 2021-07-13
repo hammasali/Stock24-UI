@@ -1,3 +1,45 @@
+const String BackCard =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="74" height="44" viewBox="0 0 74 44">
+  <g id="Group_224" data-name="Group 224" transform="translate(-1422 -707.183)">
+    <rect id="Rectangle_633" data-name="Rectangle 633" width="74" height="44" rx="5" transform="translate(1422 707.183)" fill="#e4e4e4"/>
+    <rect id="Rectangle_634" data-name="Rectangle 634" width="37" height="6" rx="1" transform="translate(1453 715.183)" fill="#fff"/>
+    <path id="Icon_awesome-servicestack" data-name="Icon awesome-servicestack" d="M3.039,9.709c2.821.35,9.451,3.506,10.5,7.951H0C3.436,17.382,6.371,12.965,3.039,9.709ZM4.144,4.5a6.485,6.485,0,0,1,1.6,4.578c2.863,1.155,7.158,4.239,8.066,8.581h3.315C15.721,10.254,7.693,5.031,4.144,4.5Z" transform="translate(1428 715.104)" fill="#fff"/>
+    <rect id="Rectangle_637" data-name="Rectangle 637" width="37" height="6" rx="1" transform="translate(1453 723.183)" fill="#fff"/>
+    <rect id="Rectangle_638" data-name="Rectangle 638" width="62" height="6" rx="1" transform="translate(1428 743.183)" fill="#fff"/>
+    <rect id="Rectangle_639" data-name="Rectangle 639" width="37" height="6" rx="1" transform="translate(1453 731.183)" fill="#fff"/>
+  </g>
+</svg>
+ ''';
+
+const String frontCard =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="74" height="44" viewBox="0 0 74 44">
+  <g id="Group_222" data-name="Group 222" transform="translate(-1422 -707.183)">
+    <rect id="Rectangle_633" data-name="Rectangle 633" width="74" height="44" rx="5" transform="translate(1422 707.183)" fill="#e4e4e4"/>
+    <path id="Icon_awesome-servicestack" data-name="Icon awesome-servicestack" d="M3.039,9.709c2.821.35,9.451,3.506,10.5,7.951H0C3.436,17.382,6.371,12.965,3.039,9.709ZM4.144,4.5a6.485,6.485,0,0,1,1.6,4.578c2.863,1.155,7.158,4.239,8.066,8.581h3.315C15.721,10.254,7.693,5.031,4.144,4.5Z" transform="translate(1448 713.104)" fill="#fff"/>
+    <rect id="Rectangle_638" data-name="Rectangle 638" width="51" height="5" rx="1" transform="translate(1433 734.183)" fill="#fff"/>
+    <rect id="Rectangle_640" data-name="Rectangle 640" width="38" height="4" rx="1" transform="translate(1440 742.183)" fill="#fff"/>
+  </g>
+</svg>
+ ''';
+
+const String dottedLine =
+    '''<svg xmlns="http://www.w3.org/2000/svg" width="372" height="1" viewBox="0 0 372 1">
+  <line id="Line_9" data-name="Line 9" x2="372" transform="translate(0 0.5)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="2"/>
+</svg>
+ ''';
+
+const String progress2 =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+  <circle id="Ellipse_5" data-name="Ellipse 5" cx="5" cy="5" r="5" fill="#fff"/>
+</svg>
+ ''';
+
+const String progress =
+    '''<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="11" cy="11" r="11" fill="#1b285c"/>
+</svg>
+ ''';
+
 const String logo =
     ''' <svg xmlns="http://www.w3.org/2000/svg" width="226" height="102" viewBox="0 0 226 102">
   <text id="Stock24" transform="translate(0 69)" fill="#fff" font-size="64" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Stock</tspan><tspan y="0" font-family="Papyrus">24</tspan></text>
@@ -11,25 +53,25 @@ const String verticalDivider =
 ''';
 
 const String whatsApp =
-    '''<svg xmlns="http://www.w3.org/2000/svg" width="13.553" height="13.564" viewBox="0 0 13.553 13.564">
+'''<svg xmlns="http://www.w3.org/2000/svg" width="13.553" height="13.564" viewBox="0 0 13.553 13.564">
   <path id="Icon_ionic-logo-whatsapp" data-name="Icon ionic-logo-whatsapp" d="M9.149,2.25A6.631,6.631,0,0,0,2.5,8.857a6.543,6.543,0,0,0,.955,3.412l-1.2,3.545,3.684-1.171A6.622,6.622,0,1,0,9.149,2.25Zm3.308,9.117a1.718,1.718,0,0,1-1.177.759c-.312.017-.321.242-2.022-.5a6.945,6.945,0,0,1-2.8-2.654A3.267,3.267,0,0,1,5.826,7.2,1.887,1.887,0,0,1,6.474,5.82a.651.651,0,0,1,.461-.194c.134,0,.221,0,.32,0s.248-.021.377.322.437,1.185.476,1.271a.309.309,0,0,1,0,.3,1.157,1.157,0,0,1-.18.275c-.089.1-.187.213-.266.286s-.181.169-.088.341a5.1,5.1,0,0,0,.9,1.2,4.642,4.642,0,0,0,1.334.888c.167.091.266.081.37-.028s.443-.477.563-.641.232-.132.385-.071.973.5,1.14.592.278.137.318.209A1.4,1.4,0,0,1,12.458,11.367Z" transform="translate(-2.25 -2.25)" fill="#094b0c"/>
 </svg>
  ''';
 
 const String mobile =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="9.58" height="13.11" viewBox="0 0 9.58 13.11">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="9.58" height="13.11" viewBox="0 0 9.58 13.11">
   <path id="Icon_awesome-mobile" data-name="Icon awesome-mobile" d="M8.143,0H1.437A1.346,1.346,0,0,0,0,1.229V11.881A1.346,1.346,0,0,0,1.437,13.11H8.143A1.346,1.346,0,0,0,9.58,11.881V1.229A1.346,1.346,0,0,0,8.143,0ZM4.79,12.291a.9.9,0,0,1-.958-.819.9.9,0,0,1,.958-.819.9.9,0,0,1,.958.819A.9.9,0,0,1,4.79,12.291Z" fill="#1b285c"/>
 </svg>
  ''';
 
 const String filter =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="19.636" height="19.182" viewBox="0 0 19.636 19.182">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="19.636" height="19.182" viewBox="0 0 19.636 19.182">
   <path id="Icon_awesome-filter" data-name="Icon awesome-filter" d="M18.715,0H.922A.9.9,0,0,0,.271,1.535l7.093,6.93v7.72a.893.893,0,0,0,.393.737l3.068,2.1a.922.922,0,0,0,1.448-.737V8.465l7.093-6.93A.9.9,0,0,0,18.715,0Z" fill="#1b285c"/>
 </svg>
  ''';
 
 const String back =
-    '''<svg xmlns="http://www.w3.org/2000/svg" width="20.243" height="13.501" viewBox="0 0 20.243 13.501">
+'''<svg xmlns="http://www.w3.org/2000/svg" width="20.243" height="13.501" viewBox="0 0 20.243 13.501">
   <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M15.216,11.51a.919.919,0,0,1,.007,1.294l-4.268,4.282H27.218a.914.914,0,0,1,0,1.828H10.955L15.23,23.2a.925.925,0,0,1-.007,1.294.91.91,0,0,1-1.287-.007L8.142,18.647h0a1.026,1.026,0,0,1-.19-.288.872.872,0,0,1-.07-.352.916.916,0,0,1,.26-.64l5.794-5.836A.9.9,0,0,1,15.216,11.51Z" transform="translate(-7.882 -11.252)" fill="#1b285c"/>
 </svg>
 

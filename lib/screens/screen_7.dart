@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
@@ -195,6 +196,275 @@ class _Screen7State extends State<Screen7> {
         ),
       );
 
+  get _bankName => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_BankName,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _branchName => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_BranchName,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _accountType => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_AccountType,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _accountNumber => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_AccountNum,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _ifscCode => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_IFCSCode,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: Icon(
+              FontAwesomeIcons.asterisk,
+              color: AppInfo.AsteriskClr,
+              size: 8,
+            ),
+          ),
+        ),
+      );
+
+  get _buttons => Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: InkWell(
+              onTap: () => Navigator.of(context).pop(),
+              child: Container(
+                padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  border: Border.all(width: 1.0, color: AppInfo.SplashBgClr),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x43ffffff),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    En.en_Previous,
+                    style: TextStyle(
+                      fontFamily: 'Skia',
+                      fontSize: 22,
+                      color: AppInfo.TextClr,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: AppInfo.getScreenHeight(context) * 0.028,
+          ),
+          Expanded(
+            child: InkWell(
+              // onTap: () => Navigator.of(context).pushNamed(Screen7.routeName),
+              child: Container(
+                padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: AppInfo.TextClr,
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x43ffffff),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Text(
+                    En.en_NextBtn,
+                    style: TextStyle(
+                      fontFamily: 'Skia',
+                      fontSize: 22,
+                      color: AppInfo.SplashTxtClr,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -206,7 +476,33 @@ class _Screen7State extends State<Screen7> {
             child: Container(
               margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
               child: Column(
-                children: [_progress],
+                children: [
+                  _progress,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.02,
+                  ),
+                  _bankName,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _branchName,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _accountType,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _accountNumber,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _ifscCode,
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  _buttons,
+                ],
               ),
             ),
           ),

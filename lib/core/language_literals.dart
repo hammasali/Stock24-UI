@@ -69,6 +69,11 @@ class En extends Language {
   static const String en_Country = 'Country';
   static const String en_Previous = 'Previous';
 
+  static const String en_BankName = 'Bank Name';
+  static const String en_BranchName = 'Branch Name';
+  static const String en_AccountType = 'Account Type';
+  static const String en_AccountNum = 'Account Number';
+  static const String en_IFCSCode = 'IFCS Code';
 
 
 

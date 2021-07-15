@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
+import 'package:stock/screens/screen_8.dart';
 
 class Screen7 extends StatefulWidget {
   const Screen7({Key? key}) : super(key: key);
@@ -434,7 +435,7 @@ class _Screen7State extends State<Screen7> {
           ),
           Expanded(
             child: InkWell(
-              // onTap: () => Navigator.of(context).pushNamed(Screen7.routeName),
+              onTap: () => Navigator.of(context).pushNamed(Screen8.routeName),
               child: Container(
                 padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
                 decoration: BoxDecoration(

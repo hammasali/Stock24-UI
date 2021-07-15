@@ -75,6 +75,26 @@ class En extends Language {
   static const String en_AccountNum = 'Account Number';
   static const String en_IFCSCode = 'IFCS Code';
 
+  static const String en_Tittle6 = 'Dealer Details';
+  static const String en_FirmName = 'Firm Name';
+  static const String en_VisitingCard = 'Visiting Card';
+  static const String en_View = 'View';
+  static const String en_PersonalDetails2 = 'Personal Details';
+  static const String en_BillingDetails2 = 'Billing Details';
+  static const String en_BankDetails2 = 'Bank Details';
+  static const String en_ViewProductBtn = 'View Product';
+  static const String en_EditBtn = 'Edit';
+
+  static const String en_Title7 = 'Sub Dealers';
+  static const String en_TotalSubDealers = 'Total Sub Dealers';
+  static const String en_RakeshCeramics = 'Rakesh Ceramics ';
+
+  static const String en_Title8 = 'Add Sub Dealers';
+  static const String en_SelectDealerMulti = 'Select Dealer(Multiselect)';
+
+  static const String en_Title9 = 'Sub Dealers Details';
+  static const String en_DealersAssWith =   'Dealers associated with :';
+  static const String en_ViewProductsBtn = 'View Products';
 
 
 }

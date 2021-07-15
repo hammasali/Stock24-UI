@@ -5,128 +5,142 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
+import 'package:stock/screens/screen_10.dart';
 import 'package:stock/screens/screen_3.dart';
 import 'package:stock/screens/screen_5.dart';
 
-class Screen4 extends StatelessWidget {
-  static const String routeName = '/screen4';
+class Screen9 extends StatelessWidget {
+  static const String routeName = '/screen9';
 
-  const Screen4({Key? key}) : super(key: key);
+  const Screen9({Key? key}) : super(key: key);
 
   _appBar(context) => AppBar(
-        backgroundColor: AppInfo.BgClr,
-        elevation: 0.0,
-        brightness: Brightness.dark,
-        backwardsCompatibility: false,
-        systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: AppInfo.BgClr,
-            statusBarBrightness: Brightness.dark,
-            statusBarIconBrightness: Brightness.dark,
-            systemNavigationBarIconBrightness: Brightness.dark),
-        toolbarHeight: 70.0,
-        centerTitle: true,
-        leading: InkWell(
-          onTap: () => Navigator.of(context).pop(),
-          child: SvgPicture.string(
-            back,
-            fit: BoxFit.scaleDown,
-            allowDrawingOutsideViewBox: true,
+    backgroundColor: AppInfo.BgClr,
+    elevation: 0.0,
+    brightness: Brightness.dark,
+    backwardsCompatibility: false,
+    systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: AppInfo.BgClr,
+        statusBarBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarIconBrightness: Brightness.dark),
+    toolbarHeight: 70.0,
+    centerTitle: true,
+    leading: InkWell(
+      onTap: () => Navigator.of(context).pop(),
+      child: SvgPicture.string(
+        back,
+        fit: BoxFit.scaleDown,
+        allowDrawingOutsideViewBox: true,
+      ),
+    ),
+    title: Text(
+      En.en_Title7,
+      style: GoogleFonts.roboto(
+        textStyle: TextStyle(
+          fontFamily: 'Roboto',
+          fontSize: 24,
+          color: AppInfo.TextClr,
+        ),
+      ),
+      textAlign: TextAlign.left,
+    ),
+  );
+
+  get _search => Padding(
+    padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+    child: Row(
+      children: [
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5.0),
+              color: AppInfo.BgClr,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0x29000000),
+                  offset: Offset(0, 3),
+                  blurRadius: 6,
+                ),
+              ],
+            ),
+            child: TextField(
+              cursorColor: AppInfo.TextClr,
+              autofocus: false,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                focusedErrorBorder: InputBorder.none,
+                disabledBorder: InputBorder.none,
+                errorBorder: InputBorder.none,
+                contentPadding:
+                const EdgeInsets.all(AppInfo.kDefaultPadding),
+                hintText: En.en_SearchHint,
+                hintStyle: GoogleFonts.roboto(
+                  textStyle: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
-        title: Text(
-          En.en_Tittle4,
+        SizedBox(
+          width: 10.0,
+        ),
+        Container(
+          padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5.0),
+            color: AppInfo.SplashBgClr,
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0x43ffffff),
+                offset: Offset(0, 3),
+                blurRadius: 6,
+              ),
+            ],
+          ),
+          child: Text(
+            En.en_AddBtn,
+            style: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 20,
+                color: AppInfo.SplashTxtClr,
+              ),
+            ),
+            textAlign: TextAlign.left,
+          ),
+        ),
+      ],
+    ),
+  );
+
+  get _filter => Padding(
+    padding: const EdgeInsets.symmetric(
+        horizontal: AppInfo.kDefaultPadding,
+        vertical: AppInfo.kDefaultPadding / 2),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          '${En.en_TotalSubDealers}  : 14',
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
               fontFamily: 'Roboto',
-              fontSize: 24,
+              fontSize: 18,
               color: AppInfo.TextClr,
             ),
           ),
           textAlign: TextAlign.left,
         ),
-      );
-
-  get _search => Padding(
-        padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-        child: Row(
-          children: [
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  color: AppInfo.BgClr,
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0x29000000),
-                      offset: Offset(0, 3),
-                      blurRadius: 6,
-                    ),
-                  ],
-                ),
-                child: TextField(
-                  cursorColor: AppInfo.TextClr,
-                  autofocus: false,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    enabledBorder: InputBorder.none,
-                    focusedErrorBorder: InputBorder.none,
-                    disabledBorder: InputBorder.none,
-                    errorBorder: InputBorder.none,
-                    contentPadding:
-                        const EdgeInsets.all(AppInfo.kDefaultPadding),
-                    hintText: En.en_SearchHint,
-                    hintStyle: GoogleFonts.roboto(
-                      textStyle: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
-            Container(
-              padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                color: AppInfo.SplashBgClr,
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x43ffffff),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-              child: Text(
-                En.en_AddBtn,
-                style: GoogleFonts.roboto(
-                  textStyle: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 20,
-                    color: AppInfo.SplashTxtClr,
-                  ),
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          ],
-        ),
-      );
-
-  get _filter => Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: AppInfo.kDefaultPadding,
-            vertical: AppInfo.kDefaultPadding / 2),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        Row(
           children: [
             Text(
-              '${En.en_TotalDealers}  : 14',
+              En.en_Filter,
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                   fontFamily: 'Roboto',
@@ -136,32 +150,19 @@ class Screen4 extends StatelessWidget {
               ),
               textAlign: TextAlign.left,
             ),
-            Row(
-              children: [
-                Text(
-                  En.en_Filter,
-                  style: GoogleFonts.roboto(
-                    textStyle: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 18,
-                      color: AppInfo.TextClr,
-                    ),
-                  ),
-                  textAlign: TextAlign.left,
-                ),
-                SizedBox(
-                  width: 10.0,
-                ),
-                SvgPicture.string(
-                  filter,
-                  fit: BoxFit.scaleDown,
-                  allowDrawingOutsideViewBox: true,
-                ),
-              ],
+            SizedBox(
+              width: 10.0,
+            ),
+            SvgPicture.string(
+              filter,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
             ),
           ],
         ),
-      );
+      ],
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -178,17 +179,17 @@ class Screen4 extends StatelessWidget {
                   child: ListView.separated(
                     itemCount: 5,
                     padding:
-                        const EdgeInsets.only(top: AppInfo.kDefaultPadding),
+                    const EdgeInsets.only(top: AppInfo.kDefaultPadding),
                     physics: BouncingScrollPhysics(
                         parent: AlwaysScrollableScrollPhysics()),
                     shrinkWrap: false,
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () =>
-                            Navigator.of(context).pushNamed(Screen5.routeName),
+                            Navigator.of(context).pushNamed(Screen10.routeName),
                         child: Container(
                           padding:
-                              const EdgeInsets.all(AppInfo.kDefaultPadding),
+                          const EdgeInsets.all(AppInfo.kDefaultPadding),
                           margin: const EdgeInsets.symmetric(
                               horizontal: AppInfo.kDefaultPadding),
                           decoration: BoxDecoration(
@@ -206,7 +207,7 @@ class Screen4 extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                En.en_AdvanceTrader,
+                                En.en_RakeshCeramics,
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     fontFamily: 'Roboto',
@@ -231,7 +232,7 @@ class Screen4 extends StatelessWidget {
                               Divider(),
                               Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
+                                MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
                                     En.en_Edit,

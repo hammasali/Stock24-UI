@@ -93,8 +93,12 @@ class En extends Language {
   static const String en_SelectDealerMulti = 'Select Dealer(Multiselect)';
 
   static const String en_Title9 = 'Sub Dealers Details';
-  static const String en_DealersAssWith =   'Dealers associated with :';
+  static const String en_DealersAssWith = 'Dealers associated with :';
   static const String en_ViewProductsBtn = 'View Products';
 
-
+  static const String en_Title10 = 'Products';
+  static const String en_TotalProducts = 'Total Products : ';
+  static const String en_Selected = 'Selected';
+  static const String en_ShareImageOnly = 'Share Image Only';
+  static const String en_ShareWithDetails = 'Share with Details';
 }

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
+import 'package:stock/screens/screen_12.dart';
 
 class Screen11 extends StatefulWidget {
   const Screen11({Key? key}) : super(key: key);
@@ -119,8 +120,8 @@ class _Screen11State extends State<Screen11> {
       );
 
   get _buttons => InkWell(
-          // onTap: () => Navigator.of(context).pushNamed(Screen9.routeName),
-          child: Container(
+      onTap: () => Navigator.of(context).pushNamed(Screen12.routeName),
+      child: Container(
         width: AppInfo.getScreenWidth(context) / 2,
         padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(

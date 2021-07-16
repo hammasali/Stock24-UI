@@ -1,3 +1,15 @@
+const String shareIcon2 =
+    '''<svg xmlns="http://www.w3.org/2000/svg" width="28.868" height="25.564" viewBox="0 0 28.868 25.564">
+  <path id="Icon_awesome-share-square" data-name="Icon awesome-share-square" d="M28.491,8.86l-7.217,6.79a1.2,1.2,0,0,1-2.029-.871V11.186c-7.246.048-10.3,1.753-8.258,8.556a.8.8,0,0,1-1.253.865,9.6,9.6,0,0,1-3.72-7.158c0-7.187,5.894-8.613,13.231-8.654V1.2A1.2,1.2,0,0,1,21.274.328l7.217,6.79A1.2,1.2,0,0,1,28.491,8.86ZM19.245,18.93v3.439H3.208V6.391H5.759a.6.6,0,0,0,.433-.184A9.768,9.768,0,0,1,8.749,4.326.6.6,0,0,0,8.472,3.2H2.406A2.4,2.4,0,0,0,0,5.592V23.168a2.4,2.4,0,0,0,2.406,2.4H20.047a2.4,2.4,0,0,0,2.406-2.4V18.734a.6.6,0,0,0-.8-.564,3.613,3.613,0,0,1-1.713.169A.6.6,0,0,0,19.245,18.93Z" fill="#ae824b"/>
+</svg>
+ ''';
+
+const String shareIcon =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="26.298" height="25.064" viewBox="0 0 26.298 25.064">
+  <path id="Icon_awesome-share-alt-square" data-name="Icon awesome-share-alt-square" d="M26.3,4.935V24.629a2.754,2.754,0,0,1-2.818,2.685H2.818A2.754,2.754,0,0,1,0,24.629V4.935A2.754,2.754,0,0,1,2.818,2.25H23.481A2.754,2.754,0,0,1,26.3,4.935ZM17.845,17.02a3.366,3.366,0,0,0-2.218.821L11.638,15.56a3.009,3.009,0,0,0,0-1.555l3.989-2.281a3.366,3.366,0,0,0,2.218.821,3.213,3.213,0,0,0,3.287-3.133,3.291,3.291,0,0,0-6.575,0,3,3,0,0,0,.1.777L10.671,12.47a3.366,3.366,0,0,0-2.218-.821,3.213,3.213,0,0,0-3.287,3.133,3.213,3.213,0,0,0,3.287,3.133,3.366,3.366,0,0,0,2.218-.821l3.989,2.281a3,3,0,0,0-.1.778,3.291,3.291,0,1,0,3.287-3.133Z" transform="translate(0 -2.25)" fill="#ae824b"/>
+</svg>
+''';
+
 const String BackCard =
     ''' <svg xmlns="http://www.w3.org/2000/svg" width="74" height="44" viewBox="0 0 74 44">
   <g id="Group_224" data-name="Group 224" transform="translate(-1422 -707.183)">
@@ -12,7 +24,7 @@ const String BackCard =
  ''';
 
 const String frontCard =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="74" height="44" viewBox="0 0 74 44">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="74" height="44" viewBox="0 0 74 44">
   <g id="Group_222" data-name="Group 222" transform="translate(-1422 -707.183)">
     <rect id="Rectangle_633" data-name="Rectangle 633" width="74" height="44" rx="5" transform="translate(1422 707.183)" fill="#e4e4e4"/>
     <path id="Icon_awesome-servicestack" data-name="Icon awesome-servicestack" d="M3.039,9.709c2.821.35,9.451,3.506,10.5,7.951H0C3.436,17.382,6.371,12.965,3.039,9.709ZM4.144,4.5a6.485,6.485,0,0,1,1.6,4.578c2.863,1.155,7.158,4.239,8.066,8.581h3.315C15.721,10.254,7.693,5.031,4.144,4.5Z" transform="translate(1448 713.104)" fill="#fff"/>
@@ -23,31 +35,31 @@ const String frontCard =
  ''';
 
 const String dottedLine =
-    '''<svg xmlns="http://www.w3.org/2000/svg" width="372" height="1" viewBox="0 0 372 1">
+'''<svg xmlns="http://www.w3.org/2000/svg" width="372" height="1" viewBox="0 0 372 1">
   <line id="Line_9" data-name="Line 9" x2="372" transform="translate(0 0.5)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="2"/>
 </svg>
  ''';
 
 const String progress2 =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
   <circle id="Ellipse_5" data-name="Ellipse 5" cx="5" cy="5" r="5" fill="#fff"/>
 </svg>
  ''';
 
 const String progress =
-    '''<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+'''<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
   <circle id="Ellipse_2" data-name="Ellipse 2" cx="11" cy="11" r="11" fill="#1b285c"/>
 </svg>
  ''';
 
 const String logo =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="226" height="102" viewBox="0 0 226 102">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="226" height="102" viewBox="0 0 226 102">
   <text id="Stock24" transform="translate(0 69)" fill="#fff" font-size="64" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Stock</tspan><tspan y="0" font-family="Papyrus">24</tspan></text>
 </svg>
  ''';
 
 const String verticalDivider =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="1" height="16" viewBox="0 0 1 16">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="1" height="16" viewBox="0 0 1 16">
   <line id="Line_7" data-name="Line 7" y2="16" transform="translate(0.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.121"/>
 </svg>
 ''';

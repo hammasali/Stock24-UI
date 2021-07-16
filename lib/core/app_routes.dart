@@ -3,6 +3,7 @@ import 'package:stock/screens/auth_screens/auth_screen1.dart';
 import 'package:stock/screens/screen_1.dart';
 import 'package:stock/screens/screen_10.dart';
 import 'package:stock/screens/screen_11.dart';
+import 'package:stock/screens/screen_12.dart';
 import 'package:stock/screens/screen_2.dart';
 import 'package:stock/screens/screen_3.dart';
 import 'package:stock/screens/screen_4.dart';
@@ -51,6 +52,9 @@ class AppRoutes {
 
         case Screen11.routeName:
           return MaterialPageRoute(builder: (_) => Screen11());
+
+        case Screen12.routeName:
+          return MaterialPageRoute(builder: (_) => Screen12());
 
         default:
           return null;

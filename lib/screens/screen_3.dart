@@ -32,6 +32,7 @@ class Screen3 extends StatelessWidget {
           cursorColor: AppInfo.TextClr,
           autofocus: false,
           decoration: InputDecoration(
+
             border: InputBorder.none,
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
@@ -46,6 +47,19 @@ class Screen3 extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
+
+            // prefixIcon: Text.rich(
+            //   TextSpan(
+            //     text: 'FIRST NAME',
+            //     children: <InlineSpan>[
+            //       TextSpan(
+            //         text: '*',
+            //         style: TextStyle(color: Colors.red),
+            //       ),
+            //     ],
+            //     style: TextStyle(color: Colors.black54),
+            //   ),
+            // ),
             suffixIcon: Icon(
               FontAwesomeIcons.asterisk,
               color: AppInfo.AsteriskClr,

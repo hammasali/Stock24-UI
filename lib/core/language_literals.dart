@@ -101,4 +101,23 @@ class En extends Language {
   static const String en_Selected = 'Selected';
   static const String en_ShareImageOnly = 'Share Image Only';
   static const String en_ShareWithDetails = 'Share with Details';
+
+  static const String en_Title11 = 'Products Details';
+  static const String en_ContactDealer = 'Contact Dealer';
+  static const String en_AddToCartBtn = 'Add to Cart';
+  static const String en_ProductName = 'Product Name';
+  static const String en_Size = 'Size';
+  static const String en_Body = 'Body';
+  static const String en_Finish = 'Finish';
+  static const String en_TilesPerBox = 'Tiles Per Box';
+  static const String en_SqmtrPerBox = 'Sqmtr Per Box';
+  static const String en_SqftPerBox = 'Sqft Per Box';
+  static const String en_AvaQty = 'Ava Qty';
+  static const String en_Price = 'Price';
+  static const String en_MRP = 'MRP';
+  static const String en_Status = 'Status';
+
+// static String icon = const FaIcon(
+//   FontAwesomeIcons.asterisk,
+// ).color!.red.toString();
 }

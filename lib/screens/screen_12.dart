@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stock/business_logic/cubit/counter_cubit.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
+import 'package:stock/screens/screen_13.dart';
 
 class Screen12 extends StatefulWidget {
   static const String routeName = '/screen_12';
@@ -16,8 +19,6 @@ class Screen12 extends StatefulWidget {
 }
 
 class _Screen12State extends State<Screen12> {
-  AppCheck? appCheck;
-
   _appBar(context) => AppBar(
         backgroundColor: AppInfo.BgClr,
         elevation: 0.0,
@@ -135,141 +136,144 @@ class _Screen12State extends State<Screen12> {
               BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           shrinkWrap: false,
           children: List.generate(6, (index) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5.0),
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/product1.jpg'),
-                            fit: BoxFit.cover,
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0x29000000),
-                              offset: Offset(0, 3),
-                              blurRadius: 6,
+            return InkWell(
+              onTap: () => Navigator.of(context).pushNamed(Screen13.routeName),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5.0),
+                            image: DecorationImage(
+                              image: AssetImage('assets/images/product1.jpg'),
+                              fit: BoxFit.cover,
                             ),
-                          ],
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0x6c6c62a3),
+                                offset: Offset(0, 3),
+                                blurRadius: 6,
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      AppCheck(index: index),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: AppInfo.getScreenHeight(context) * 0.028,
-                ),
-                Text(
-                  'Delmon Beige',
-                  style: GoogleFonts.roboto(
-                    textStyle: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 18,
-                      color: AppInfo.TextClr,
+                        AppCheck(index: index),
+                      ],
                     ),
                   ),
-                  textAlign: TextAlign.left,
-                ),
-              ],
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.028,
+                  ),
+                  Text(
+                    'Delmon Beige',
+                    style: GoogleFonts.roboto(
+                      textStyle: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 18,
+                        color: AppInfo.TextClr,
+                      ),
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ],
+              ),
             );
           }),
         ),
       );
 
-  get _actionDialog => Container(
-        padding:
-            const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-        height: AppInfo.getScreenHeight(context) * 0.12,
-        decoration: BoxDecoration(
-          color: AppInfo.BgClr,
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x29000000),
-              offset: Offset(0, 3),
-              blurRadius: 6,
-            ),
-          ],
+  Widget _actionDialog(int value) => Container(
+    padding:
+        const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
+    height: AppInfo.getScreenHeight(context) * 0.12,
+    decoration: BoxDecoration(
+      color: AppInfo.BgClr,
+      boxShadow: [
+        BoxShadow(
+          color: const Color(0x29000000),
+          offset: Offset(0, 3),
+          blurRadius: 6,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(
-              '${En.en_Selected} : 15',
-              style: GoogleFonts.roboto(
-                textStyle: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 18,
-                  color: AppInfo.TextClr,
-                ),
-              ),
-              textAlign: TextAlign.left,
+      ],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          '${En.en_Selected} : $value',
+          style: GoogleFonts.roboto(
+            textStyle: TextStyle(
+              fontFamily: 'Roboto',
+              fontSize: 18,
+              color: AppInfo.TextClr,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () {},
-                  child: Wrap(
-                    children: [
-                      SvgPicture.string(
-                        shareIcon,
-                        fit: BoxFit.scaleDown,
-                        allowDrawingOutsideViewBox: true,
-                      ),
-                      SizedBox(
-                        width: AppInfo.getScreenWidth(context) * 0.018,
-                      ),
-                      Text(
-                        En.en_ShareImageOnly,
-                        style: GoogleFonts.roboto(
-                          textStyle: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 16,
-                            color: AppInfo.TextClr,
-                          ),
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ],
+          ),
+          textAlign: TextAlign.left,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            InkWell(
+              onTap: () {},
+              child: Wrap(
+                children: [
+                  SvgPicture.string(
+                    shareIcon,
+                    fit: BoxFit.scaleDown,
+                    allowDrawingOutsideViewBox: true,
                   ),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Wrap(
-                    children: [
-                      SvgPicture.string(
-                        shareIcon2,
-                        fit: BoxFit.scaleDown,
-                        allowDrawingOutsideViewBox: true,
-                      ),
-                      SizedBox(
-                        width: AppInfo.getScreenWidth(context) * 0.018,
-                      ),
-                      Text(
-                        En.en_ShareWithDetails,
-                        style: GoogleFonts.roboto(
-                          textStyle: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 16,
-                            color: AppInfo.TextClr,
-                          ),
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ],
+                  SizedBox(
+                    width: AppInfo.getScreenWidth(context) * 0.018,
                   ),
-                )
-              ],
+                  Text(
+                    En.en_ShareImageOnly,
+                    style: GoogleFonts.roboto(
+                      textStyle: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 16,
+                        color: AppInfo.TextClr,
+                      ),
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ],
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Wrap(
+                children: [
+                  SvgPicture.string(
+                    shareIcon2,
+                    fit: BoxFit.scaleDown,
+                    allowDrawingOutsideViewBox: true,
+                  ),
+                  SizedBox(
+                    width: AppInfo.getScreenWidth(context) * 0.018,
+                  ),
+                  Text(
+                    En.en_ShareWithDetails,
+                    style: GoogleFonts.roboto(
+                      textStyle: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 16,
+                        color: AppInfo.TextClr,
+                      ),
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ],
+              ),
             )
           ],
-        ),
-      );
+        )
+      ],
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -298,12 +302,18 @@ class _Screen12State extends State<Screen12> {
                 ],
               ),
             ),
-            AppCheck.check
-                ? Align(
-                    alignment: Alignment.bottomCenter,
-                    child: _actionDialog,
-                  )
-                : Container(),
+            BlocBuilder<CounterCubit, CounterState>(
+              bloc: BlocProvider.of<CounterCubit>(context),
+              builder: (context, state) {
+                if (state.counterValue <= 0) return Container();
+
+                return Align(
+                  alignment: Alignment.bottomCenter,
+                  child: _actionDialog(state.counterValue),
+                );
+                return Container();
+              },
+            )
           ],
         ),
       ),
@@ -313,7 +323,6 @@ class _Screen12State extends State<Screen12> {
 
 class AppCheck extends StatefulWidget {
   final int? index;
-  static bool check = false;
 
   const AppCheck({Key? key, this.index}) : super(key: key);
 
@@ -322,6 +331,7 @@ class AppCheck extends StatefulWidget {
 }
 
 class _AppCheckState extends State<AppCheck> {
+  bool check = false;
 
   @override
   Widget build(BuildContext context) {
@@ -334,12 +344,17 @@ class _AppCheckState extends State<AppCheck> {
           child: Checkbox(
               visualDensity: VisualDensity.adaptivePlatformDensity,
               activeColor: AppInfo.BtnClr2,
-              shape: AppCheck.check ? CircleBorder() : null,
-              value: AppCheck.check,
+              shape: check ? CircleBorder() : null,
+              value: check,
               onChanged: (value) {
                 setState(() {
-                  AppCheck.check = !AppCheck.check;
+                  check = !check;
                 });
+
+                if (check)
+                  BlocProvider.of<CounterCubit>(context).increment();
+                else
+                  BlocProvider.of<CounterCubit>(context).decrement();
               }),
         ));
   }

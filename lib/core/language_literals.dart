@@ -117,6 +117,21 @@ class En extends Language {
   static const String en_MRP = 'MRP';
   static const String en_Status = 'Status';
 
+  static const String en_Title12 = 'Select Quantity';
+  static const String en_BoxHint = 'Box';
+  static const String en_Box1 = 'B1 - 40 Box';
+  static const String en_Box2 = 'B2 - 30 Box';
+  static const String en_Box3 = 'B3 - 139 Box';
+
+  static const String en_Title13 = 'Add Products';
+  static const String en_ProductNameHint = 'Product Name';
+  static const String en_Quantity = 'Quantity';
+  static const String en_AddBatch = 'Add Batch';
+  static const String en_BoxQtyHint = 'Box Qty';
+  static const String en_AddProductBtn = 'Add Product';
+
+
+
 // static String icon = const FaIcon(
 //   FontAwesomeIcons.asterisk,
 // ).color!.red.toString();

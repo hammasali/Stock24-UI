@@ -1,3 +1,33 @@
+const String dropDownIcon =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="16.466" height="11.154" viewBox="0 0 16.466 11.154">
+  <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M19.042,14.425,11.66,8.2a1.048,1.048,0,0,1,0-1.662,1.59,1.59,0,0,1,1.975,0L22,13.591a1.047,1.047,0,0,1,.041,1.623l-8.4,7.1a1.592,1.592,0,0,1-1.975,0,1.048,1.048,0,0,1,0-1.662Z" transform="translate(22.66 -11.251) rotate(90)" fill="#033269"/>
+</svg>
+ ''';
+
+const String addIcon =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="24" height="55" viewBox="0 0 24 55">
+  <text id="_" data-name="+" transform="translate(0 44)" fill="#1b285c" font-size="42" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">+</tspan></text>
+</svg>
+ ''';
+const String uploadIconLogo =
+    '''<svg xmlns="http://www.w3.org/2000/svg" width="46" height="22" viewBox="0 0 46 22">
+  <g id="Group_95" data-name="Group 95" transform="translate(-0.046 1.977)" opacity="0.315">
+    <text id="Stock24" transform="translate(0.046 12.023)" fill="#bfbfbf" font-size="13" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Stock</tspan><tspan y="0" font-family="Papyrus">24</tspan></text>
+    <text id="Next_Generation_App" data-name="Next Generation App" transform="translate(4.046 19.023)" fill="#bfbfbf" font-size="4" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Next Generation App</tspan></text>
+  </g>
+</svg>
+''';
+
+const String uploadIcon =
+    ''' <svg xmlns="http://www.w3.org/2000/svg" width="38.349" height="29.931" viewBox="0 0 38.349 29.931">
+  <g id="Icon_feather-upload-cloud" data-name="Icon feather-upload-cloud" transform="translate(1.506 1.505)">
+    <path id="Path_603" data-name="Path 603" d="M24,24l-6-6-6,6" transform="translate(-0.328 -4.549)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_604" data-name="Path 604" d="M18,18V31.5" transform="translate(-0.329 -4.574)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_605" data-name="Path 605" d="M32.635,27.514a7.293,7.293,0,0,0,3.938-8.409A7.946,7.946,0,0,0,28.8,13.473H26.774A12.6,12.6,0,0,0,15.795,4.581,13.1,13.1,0,0,0,2.946,10.939a11.324,11.324,0,0,0,1.766,13.45" transform="translate(-1.492 -4.503)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_606" data-name="Path 606" d="M24,24l-6-6-6,6" transform="translate(-0.328 -4.549)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>
+  ''';
 const String whatsapp2 =
     ''' <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25">
   <path id="Icon_awesome-whatsapp-square" data-name="Icon awesome-whatsapp-square" d="M13,7.25c-4.219,0-7.994,2.943-8,7,0,1.39,1.234,2.834,2,4v1l-1,2H9a8.239,8.239,0,0,0,4,1h0a8.392,8.392,0,0,0,8-8c0-1.964-1.555-3.61-3-5A6.664,6.664,0,0,0,13,7.25Zm4,11a1.42,1.42,0,0,1-1,1c-.731.106-1.543-.4-3-1a11.34,11.34,0,0,1-4-3,7.908,7.908,0,0,1-1-3c0-1.088.785-.777,1-1s.843-1,1-1-.133-.006,0,0a2.472,2.472,0,0,1,1,1c.192.441-.058.888,0,1a2.418,2.418,0,0,1,0,1c-.441.848-.238.609,0,1a6.792,6.792,0,0,0,3,3c.232.112-.133.151,0,0s.849-.782,1-1,.791-.073,1,0,.768-.112,1,0a6.2,6.2,0,0,1,1,1C18.052,17.356,17.192,17.737,17,18.25Zm6-16H3a3.213,3.213,0,0,0-3,3v19a3.213,3.213,0,0,0,3,3H23a3.213,3.213,0,0,0,3-3v-19A3.213,3.213,0,0,0,23,2.25Zm-10,21a7.885,7.885,0,0,1-4-1l-5,1,1-4a10.537,10.537,0,0,1-1-5c.006-4.877,3.928-8,9-8,2.461,0,5.259.326,7,2s2,3.634,2,6A8.994,8.994,0,0,1,13,23.25Z" transform="translate(0 -2.25)" fill="#5cbd54"/>
@@ -16,13 +46,13 @@ const String phone =
  ''';
 
 const String shareIcon2 =
-    '''<svg xmlns="http://www.w3.org/2000/svg" width="28.868" height="25.564" viewBox="0 0 28.868 25.564">
+'''<svg xmlns="http://www.w3.org/2000/svg" width="28.868" height="25.564" viewBox="0 0 28.868 25.564">
   <path id="Icon_awesome-share-square" data-name="Icon awesome-share-square" d="M28.491,8.86l-7.217,6.79a1.2,1.2,0,0,1-2.029-.871V11.186c-7.246.048-10.3,1.753-8.258,8.556a.8.8,0,0,1-1.253.865,9.6,9.6,0,0,1-3.72-7.158c0-7.187,5.894-8.613,13.231-8.654V1.2A1.2,1.2,0,0,1,21.274.328l7.217,6.79A1.2,1.2,0,0,1,28.491,8.86ZM19.245,18.93v3.439H3.208V6.391H5.759a.6.6,0,0,0,.433-.184A9.768,9.768,0,0,1,8.749,4.326.6.6,0,0,0,8.472,3.2H2.406A2.4,2.4,0,0,0,0,5.592V23.168a2.4,2.4,0,0,0,2.406,2.4H20.047a2.4,2.4,0,0,0,2.406-2.4V18.734a.6.6,0,0,0-.8-.564,3.613,3.613,0,0,1-1.713.169A.6.6,0,0,0,19.245,18.93Z" fill="#ae824b"/>
 </svg>
  ''';
 
 const String shareIcon =
-    ''' <svg xmlns="http://www.w3.org/2000/svg" width="26.298" height="25.064" viewBox="0 0 26.298 25.064">
+''' <svg xmlns="http://www.w3.org/2000/svg" width="26.298" height="25.064" viewBox="0 0 26.298 25.064">
   <path id="Icon_awesome-share-alt-square" data-name="Icon awesome-share-alt-square" d="M26.3,4.935V24.629a2.754,2.754,0,0,1-2.818,2.685H2.818A2.754,2.754,0,0,1,0,24.629V4.935A2.754,2.754,0,0,1,2.818,2.25H23.481A2.754,2.754,0,0,1,26.3,4.935ZM17.845,17.02a3.366,3.366,0,0,0-2.218.821L11.638,15.56a3.009,3.009,0,0,0,0-1.555l3.989-2.281a3.366,3.366,0,0,0,2.218.821,3.213,3.213,0,0,0,3.287-3.133,3.291,3.291,0,0,0-6.575,0,3,3,0,0,0,.1.777L10.671,12.47a3.366,3.366,0,0,0-2.218-.821,3.213,3.213,0,0,0-3.287,3.133,3.213,3.213,0,0,0,3.287,3.133,3.366,3.366,0,0,0,2.218-.821l3.989,2.281a3,3,0,0,0-.1.778,3.291,3.291,0,1,0,3.287-3.133Z" transform="translate(0 -2.25)" fill="#ae824b"/>
 </svg>
 ''';

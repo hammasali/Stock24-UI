@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
+import 'package:stock/screens/screen_14.dart';
 
 class Screen13 extends StatefulWidget {
   static const String routeName = '/screen_13';
@@ -150,8 +151,8 @@ class _Screen13State extends State<Screen13> {
       );
 
   get _button => InkWell(
-          // onTap: () => Navigator.of(context).pushNamed(Screen12.routeName),
-          child: Container(
+      onTap: () => _showDialog(),
+      child: Container(
         width: AppInfo.getScreenWidth(context) / 2,
         padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
         decoration: BoxDecoration(
@@ -177,6 +178,210 @@ class _Screen13State extends State<Screen13> {
           ),
         ),
       ));
+
+  get _boxField1 => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            isDense: true,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_BoxHint,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+          ),
+        ),
+      );
+
+  get _boxField2 => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_BoxHint,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+          ),
+        ),
+      );
+
+  get _boxField3 => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_BoxHint,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+          ),
+        ),
+      );
+
+  get _proceedButton => InkWell(
+      onTap: () => Navigator.of(context).pushNamed(Screen14.routeName),
+      child: Container(
+        width: AppInfo.getScreenWidth(context) / 2,
+        padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: AppInfo.BgClr,
+          border: Border.all(color: AppInfo.SplashBgClr),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x43ffffff),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            En.en_ProceedBtn,
+            style: TextStyle(
+              fontFamily: 'Skia',
+              fontSize: 22,
+              color: AppInfo.TextClr,
+            ),
+            textAlign: TextAlign.left,
+          ),
+        ),
+      ));
+
+  get _actionDialog => Material(
+        color: AppInfo.BgClr,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                En.en_Title12,
+                style: GoogleFonts.roboto(
+                  textStyle: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 16,
+                    color: AppInfo.TextClr,
+                  ),
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            SizedBox(
+              width: AppInfo.getScreenWidth(context) * 0.078,
+            ),
+            Row(
+              children: [
+                Text(
+                  En.en_Box1,
+                  style: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 16,
+                      color: AppInfo.TextClr,
+                    ),
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+                SizedBox(
+                  width: AppInfo.getScreenWidth(context) * 0.078,
+                ),
+                Expanded(child: _boxField1)
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  En.en_Box1,
+                  style: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 16,
+                      color: AppInfo.TextClr,
+                    ),
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+                SizedBox(
+                  width: AppInfo.getScreenWidth(context) * 0.078,
+                ),
+                Expanded(child: _boxField2)
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  En.en_Box1,
+                  style: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 16,
+                      color: AppInfo.TextClr,
+                    ),
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+                SizedBox(
+                  width: AppInfo.getScreenWidth(context) * 0.078,
+                ),
+                Expanded(child: _boxField3)
+              ],
+            ),
+            SizedBox(
+              width: AppInfo.getScreenWidth(context) * 0.078,
+            ),
+            _proceedButton,
+          ],
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -328,7 +533,6 @@ class _Screen13State extends State<Screen13> {
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),
-
           ]),
           DataRow(cells: [
             DataCell(
@@ -336,9 +540,39 @@ class _Screen13State extends State<Screen13> {
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),
-
           ]),
         ]);
+  }
+
+  void _showDialog() {
+    showGeneralDialog(
+      barrierLabel: "Barrier",
+      barrierDismissible: true,
+      barrierColor: Colors.black.withOpacity(0.5),
+      transitionDuration: Duration(milliseconds: 700),
+      context: context,
+      pageBuilder: (_, __, ___) {
+        return Align(
+          alignment: Alignment.center,
+          child: Container(
+            padding: const EdgeInsets.all(AppInfo.kDefaultPadding * 2),
+            height: AppInfo.getScreenHeight(context) * 0.48,
+            child: SizedBox.expand(child: _actionDialog),
+            margin: EdgeInsets.only(bottom: 50, left: 12, right: 12),
+            decoration: BoxDecoration(
+              color: AppInfo.BgClr,
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+        );
+      },
+      transitionBuilder: (_, anim, __, child) {
+        return SlideTransition(
+          position: Tween(begin: Offset(0, 1), end: Offset(0, 0)).animate(anim),
+          child: child,
+        );
+      },
+    );
   }
 }
 // Container(

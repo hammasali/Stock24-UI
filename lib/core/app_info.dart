@@ -12,6 +12,8 @@ class AppInfo {
 
   static const Color AsteriskClr = Color(0xffad3e3e);
 
+  static const Color TextFieldBorderClr = Color(0xb21b285c);
+  static const Color BoxClr = Color(0xb2e4e4e4);
 
   static const double kDefaultPadding = 16.0;
 

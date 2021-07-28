@@ -191,21 +191,21 @@ class _Screen13State extends State<Screen13> {
           decoration: InputDecoration(
             border: InputBorder.none,
             focusedBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-            focusedErrorBorder: InputBorder.none,
-            disabledBorder: InputBorder.none,
-            errorBorder: InputBorder.none,
-            isDense: true,
-            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_BoxHint,
-            hintStyle: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 18,
-              ),
-            ),
+        enabledBorder: InputBorder.none,
+        focusedErrorBorder: InputBorder.none,
+        disabledBorder: InputBorder.none,
+        errorBorder: InputBorder.none,
+        isDense: true,
+        contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+        hintText: En.en_BoxHint,
+        hintStyle: GoogleFonts.roboto(
+          textStyle: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 18,
           ),
         ),
+      ),
+    ),
       );
 
   get _boxField2 => Container(
@@ -325,7 +325,7 @@ class _Screen13State extends State<Screen13> {
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       fontFamily: 'Roboto',
-                      fontSize: 16,
+                      fontSize: AppInfo.getScreenHeight(context) * 0.028,
                       color: AppInfo.TextClr,
                     ),
                   ),
@@ -344,7 +344,7 @@ class _Screen13State extends State<Screen13> {
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       fontFamily: 'Roboto',
-                      fontSize: 16,
+                      fontSize: AppInfo.getScreenHeight(context) * 0.028,
                       color: AppInfo.TextClr,
                     ),
                   ),
@@ -363,7 +363,7 @@ class _Screen13State extends State<Screen13> {
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                       fontFamily: 'Roboto',
-                      fontSize: 16,
+                      fontSize: AppInfo.getScreenHeight(context) * 0.028,
                       color: AppInfo.TextClr,
                     ),
                   ),
@@ -556,13 +556,13 @@ class _Screen13State extends State<Screen13> {
           alignment: Alignment.center,
           child: Container(
             padding: const EdgeInsets.all(AppInfo.kDefaultPadding * 2),
-            height: AppInfo.getScreenHeight(context) * 0.48,
-            child: SizedBox.expand(child: _actionDialog),
+            height: AppInfo.getScreenHeight(context) * 0.68,
             margin: EdgeInsets.only(bottom: 50, left: 12, right: 12),
             decoration: BoxDecoration(
               color: AppInfo.BgClr,
               borderRadius: BorderRadius.circular(20),
             ),
+            child: SizedBox.expand(child: _actionDialog),
           ),
         );
       },

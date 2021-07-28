@@ -6,8 +6,6 @@ import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
 import 'package:stock/screens/screen_10.dart';
-import 'package:stock/screens/screen_3.dart';
-import 'package:stock/screens/screen_5.dart';
 
 class Screen9 extends StatelessWidget {
   static const String routeName = '/screen9';
@@ -221,18 +219,18 @@ class Screen9 extends StatelessWidget {
                               SizedBox(
                                 height: AppInfo.getScreenHeight(context) / 80,
                               ),
-                              containerRow(En.en_ContactPerson),
+                              containerRow(En.en_ContactPerson, false),
                               SizedBox(
                                 height: AppInfo.getScreenHeight(context) / 120,
                               ),
-                              containerRow(En.en_MobileNumber),
+                              containerRow(En.en_MobileNumber, true),
                               SizedBox(
                                 height: AppInfo.getScreenHeight(context) / 160,
                               ),
                               Divider(),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceEvenly,
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
                                     En.en_Edit,
@@ -281,7 +279,7 @@ class Screen9 extends StatelessWidget {
     );
   }
 
-  Widget containerRow(String _title) {
+  Widget containerRow(String _title, bool isPhone) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -318,6 +316,18 @@ class Screen9 extends StatelessWidget {
           ),
           textAlign: TextAlign.left,
         ),
+        Visibility(
+          visible: isPhone,
+          maintainAnimation: true,
+          maintainSize: true,
+          maintainState: true,
+          child: SvgPicture.string(
+            phone,
+            fit: BoxFit.scaleDown,
+            height: 20,
+            allowDrawingOutsideViewBox: true,
+          ),
+        )
       ],
     );
   }

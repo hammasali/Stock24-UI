@@ -34,11 +34,11 @@ class En extends Language {
   static const String en_Delete = 'Delete';
 
   static const String en_Tittle3 = 'Add Marketing Personals';
-  static const String en_NameHint = 'Enter Name';
-  static const String en_DesignationHint = 'Designation';
-  static const String en_MobileNumberHint = 'Mobile Number';
-  static const String en_WhatsappHint = 'WhatsApp Number';
-  static const String en_AreaHint = 'Area';
+  static const String en_NameHint = 'Enter Name *';
+  static const String en_DesignationHint = 'Designation *';
+  static const String en_MobileNumberHint = 'Mobile Number *';
+  static const String en_WhatsappHint = 'WhatsApp Number *';
+  static const String en_AreaHint = 'Area *';
   static const String en_SaveBtn = 'Save';
 
   static const String en_Tittle4 = 'Dealers';
@@ -51,34 +51,45 @@ class En extends Language {
   static const String en_PersonalDetails = 'Personal \nDetails';
   static const String en_BillingDetails = 'Billing \nDetails';
   static const String en_BankDetails = 'Bank \nDetails';
-  static const String en_EnterFirmName = 'Enter Firm Name';
-  static const String en_EmailId = 'Email Id';
+  static const String en_EnterFirmName = 'Enter Firm Name *';
+  static const String en_EmailIdHint = 'Email Id *';
+  static const String en_ContactPersonHint = 'Contact Person *';
   static const String en_SelectMarketingPersonal = 'Select Marketing Personal';
   static const String en_VSCard = 'Upload Visiting Card';
   static const String en_FrontSide = 'Front side';
   static const String en_BackSide = 'Back side';
   static const String en_NextBtn = 'Next';
 
-  static const String en_GSTNum = 'GST Number';
-  static const String en_PANNum = 'PAN Number';
-  static const String en_BillingAddress = 'Billing Address';
-  static const String en_PinCode = 'Pin Code';
-
+  static const String en_GSTNumHint = 'GST Number *';
+  static const String en_PANNumHint = 'PAN Number *';
+  static const String en_BillingAddressHint = 'Billing Address *';
+  static const String en_PinCodeHint = 'Pin Code *';
   static const String en_City = 'City';
   static const String en_State = 'State';
   static const String en_Country = 'Country';
   static const String en_Previous = 'Previous';
 
+  static const String en_BankNameHint = 'Bank Name *';
+  static const String en_BranchNameHint = 'Branch Name *';
+  static const String en_AccountTypeHint = 'Account Type *';
+  static const String en_AccountNumHint = 'Account Number *';
+  static const String en_IFCSCodeHint = 'IFCS Code *';
+
+  static const String en_Tittle6 = 'Dealer Details';
+  static const String en_FirmName = 'Firm Name';
+  static const String en_VisitingCard = 'Visiting Card';
+  static const String en_WhatsAppNumber = 'WhatsApp Number';
+  static const String en_EmailID = 'Email Id';
+  static const String en_View = 'View';
+  static const String en_GSTNumber = 'GST Number';
+  static const String en_PANNumber = 'PAN Number';
+  static const String en_BillingAddress = 'Billing Address';
+  static const String en_PinCode = 'Pin Code';
   static const String en_BankName = 'Bank Name';
   static const String en_BranchName = 'Branch Name';
   static const String en_AccountType = 'Account Type';
   static const String en_AccountNum = 'Account Number';
   static const String en_IFCSCode = 'IFCS Code';
-
-  static const String en_Tittle6 = 'Dealer Details';
-  static const String en_FirmName = 'Firm Name';
-  static const String en_VisitingCard = 'Visiting Card';
-  static const String en_View = 'View';
   static const String en_PersonalDetails2 = 'Personal Details';
   static const String en_BillingDetails2 = 'Billing Details';
   static const String en_BankDetails2 = 'Bank Details';
@@ -91,6 +102,7 @@ class En extends Language {
 
   static const String en_Title8 = 'Add Sub Dealers';
   static const String en_SelectDealerMulti = 'Select Dealer(Multiselect)';
+
 
   static const String en_Title9 = 'Sub Dealers Details';
   static const String en_DealersAssWith = 'Dealers associated with :';
@@ -124,7 +136,16 @@ class En extends Language {
   static const String en_Box3 = 'B3 - 139 Box';
 
   static const String en_Title13 = 'Add Products';
-  static const String en_ProductNameHint = 'Product Name';
+  static const String en_ProductNameHint = 'Product Name *';
+  static const String en_SizeHint = 'Size *';
+  static const String en_BodyHint = 'Body *';
+  static const String en_FinishHint = 'Finish *';
+  static const String en_TilesPerBoxHint = 'Tiles Per Box *';
+  static const String en_SqmtrPerBoxHint = 'Sqmtr Per Box *';
+  static const String en_SqftPerBoxHint = 'Sqft Per Box *';
+  static const String en_PriceHint = 'Price *';
+  static const String en_MRPHint = 'MRP *';
+  static const String en_StatusHint = 'Status *';
   static const String en_Quantity = 'Quantity';
   static const String en_AddBatch = 'Add Batch';
   static const String en_BoxQtyHint = 'Box Qty';

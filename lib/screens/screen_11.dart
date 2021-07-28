@@ -87,11 +87,11 @@ class _Screen11State extends State<Screen11> {
                 SizedBox(
                   height: AppInfo.getScreenHeight(context) / 80,
                 ),
-                containerRow(En.en_ContactPerson),
+                containerRow(En.en_ContactPerson,false),
                 SizedBox(
                   height: AppInfo.getScreenHeight(context) / 120,
                 ),
-                containerRow(En.en_MobileNumber),
+                containerRow(En.en_MobileNumber,true),
                 SizedBox(
                   height: AppInfo.getScreenHeight(context) / 160,
                 ),
@@ -292,7 +292,7 @@ class _Screen11State extends State<Screen11> {
         ]);
   }
 
-  Widget containerRow(String _title) {
+  Widget containerRow(String _title, bool isPhone) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -329,6 +329,18 @@ class _Screen11State extends State<Screen11> {
           ),
           textAlign: TextAlign.left,
         ),
+        Visibility(
+          visible: isPhone,
+          maintainAnimation: true,
+          maintainSize: true,
+          maintainState: true,
+          child: SvgPicture.string(
+            phone,
+            fit: BoxFit.scaleDown,
+            height: 20,
+            allowDrawingOutsideViewBox: true,
+          ),
+        )
       ],
     );
   }

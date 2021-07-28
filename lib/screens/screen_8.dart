@@ -232,14 +232,14 @@ class _Screen8State extends State<Screen8> {
           ]),
           DataRow(cells: [
             DataCell(FittedBox(
-                fit: BoxFit.scaleDown, child: Text(En.en_WhatsappHint))),
+                fit: BoxFit.scaleDown, child: Text(En.en_WhatsAppNumber))),
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),
           ]),
           DataRow(cells: [
             DataCell(
-                FittedBox(fit: BoxFit.scaleDown, child: Text(En.en_EmailId))),
+                FittedBox(fit: BoxFit.scaleDown, child: Text(En.en_EmailID))),
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),
@@ -316,14 +316,14 @@ class _Screen8State extends State<Screen8> {
         rows: [
           DataRow(cells: [
             DataCell(
-                FittedBox(fit: BoxFit.scaleDown, child: Text(En.en_GSTNum))),
+                FittedBox(fit: BoxFit.scaleDown, child: Text(En.en_GSTNumber))),
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),
           ]),
           DataRow(cells: [
             DataCell(FittedBox(
-                fit: BoxFit.scaleDown, child: Text(En.en_PANNum))),
+                fit: BoxFit.scaleDown, child: Text(En.en_PANNumber))),
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),

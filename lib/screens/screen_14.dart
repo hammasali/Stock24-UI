@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
@@ -236,11 +235,6 @@ class _Screen14State extends State<Screen14> {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
           ),
         ),
       );
@@ -269,7 +263,7 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_Size,
+            hintText: En.en_SizeHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -309,7 +303,7 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_Body,
+            hintText: En.en_BodyHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -349,7 +343,7 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_Finish,
+            hintText: En.en_FinishHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -389,17 +383,12 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_TilesPerBox,
+            hintText: En.en_TilesPerBoxHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -429,17 +418,12 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_SqmtrPerBox,
+            hintText: En.en_SqmtrPerBoxHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -469,17 +453,12 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_SqftPerBox,
+            hintText: En.en_SqftPerBoxHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -564,17 +543,12 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_Price,
+            hintText: En.en_PriceHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -604,17 +578,12 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_MRP,
+            hintText: En.en_MRPHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -644,7 +613,7 @@ class _Screen14State extends State<Screen14> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_Status,
+            hintText: En.en_StatusHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',

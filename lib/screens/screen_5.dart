@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
@@ -233,11 +232,6 @@ class _Screen5State extends State<Screen5> {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
           ),
         ),
       );
@@ -268,17 +262,12 @@ class _Screen5State extends State<Screen5> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_ContactPerson,
+            hintText: En.en_ContactPersonHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -317,11 +306,6 @@ class _Screen5State extends State<Screen5> {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
           ),
         ),
       );
@@ -359,11 +343,6 @@ class _Screen5State extends State<Screen5> {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
           ),
         ),
       );
@@ -394,17 +373,12 @@ class _Screen5State extends State<Screen5> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_EmailId,
+            hintText: En.en_EmailIdHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -444,9 +418,10 @@ class _Screen5State extends State<Screen5> {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              Icons.arrow_drop_down_outlined,
-              color: AppInfo.TextClr,
+            suffixIcon: SvgPicture.string(
+              dropDownIcon,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
             ),
           ),
         ),
@@ -454,7 +429,6 @@ class _Screen5State extends State<Screen5> {
 
   get _bottom => Container(
     margin: const EdgeInsets.symmetric(horizontal: AppInfo.kDefaultPadding),
-
     child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -470,7 +444,7 @@ class _Screen5State extends State<Screen5> {
                     text: En.en_VSCard,
                   ),
                   TextSpan(
-                    text: '*',
+                    text: ' *',
                     style: TextStyle(
                       color: AppInfo.AsteriskClr,
                     ),

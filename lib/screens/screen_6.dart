@@ -189,11 +189,6 @@ class _Screen6State extends State<Screen6> {
             SizedBox(
               height: AppInfo.getScreenHeight(context) / 40,
             ),
-            SvgPicture.string(
-              dottedLine,
-              fit: BoxFit.scaleDown,
-              allowDrawingOutsideViewBox: true,
-            ),
           ],
         ),
       );
@@ -222,18 +217,14 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_GSTNum,
+            hintText: En.en_GSTNumHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );
@@ -262,17 +253,12 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_PANNum,
+            hintText: En.en_PANNumHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -307,18 +293,14 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_BillingAddress,
+            hintText: En.en_BillingAddressHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );
@@ -347,18 +329,14 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_PinCode,
+            hintText: En.en_PinCodeHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );
@@ -390,11 +368,7 @@ class _Screen6State extends State<Screen6> {
                       fontSize: 18,
                     ),
                   ),
-                  suffixIcon: Icon(
-                    FontAwesomeIcons.asterisk,
-                    color: AppInfo.AsteriskClr,
-                    size: 8,
-                  ),
+
                 ),
               ),
             ),
@@ -427,11 +401,7 @@ class _Screen6State extends State<Screen6> {
                       fontSize: 18,
                     ),
                   ),
-                  suffixIcon: Icon(
-                    FontAwesomeIcons.asterisk,
-                    color: AppInfo.AsteriskClr,
-                    size: 8,
-                  ),
+
                 ),
               ),
             ),
@@ -463,11 +433,7 @@ class _Screen6State extends State<Screen6> {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
@@ -32,7 +31,6 @@ class Screen3 extends StatelessWidget {
           cursorColor: AppInfo.TextClr,
           autofocus: false,
           decoration: InputDecoration(
-
             border: InputBorder.none,
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
@@ -60,11 +58,6 @@ class Screen3 extends StatelessWidget {
             //     style: TextStyle(color: Colors.black54),
             //   ),
             // ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
           ),
         ),
       );
@@ -101,11 +94,6 @@ class Screen3 extends StatelessWidget {
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -144,11 +132,6 @@ class Screen3 extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
           ),
         ),
       );
@@ -185,11 +168,6 @@ class Screen3 extends StatelessWidget {
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
             ),
           ),
         ),
@@ -229,9 +207,10 @@ class Screen3 extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              Icons.arrow_drop_down_outlined,
-              color: AppInfo.TextClr,
+            suffixIcon: SvgPicture.string(
+              dropDownIcon,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
             ),
           ),
         ),

@@ -221,18 +221,14 @@ class _Screen7State extends State<Screen7> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_BankName,
+            hintText: En.en_BankNameHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );
@@ -261,18 +257,14 @@ class _Screen7State extends State<Screen7> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_BranchName,
+            hintText: En.en_BranchNameHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );
@@ -301,17 +293,17 @@ class _Screen7State extends State<Screen7> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_AccountType,
+            hintText: En.en_AccountTypeHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
+            suffixIcon: SvgPicture.string(
+              dropDownIcon,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
             ),
           ),
         ),
@@ -341,18 +333,14 @@ class _Screen7State extends State<Screen7> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_AccountNum,
+            hintText: En.en_AccountNumHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );
@@ -381,18 +369,14 @@ class _Screen7State extends State<Screen7> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_IFCSCode,
+            hintText: En.en_IFCSCodeHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.asterisk,
-              color: AppInfo.AsteriskClr,
-              size: 8,
-            ),
+
           ),
         ),
       );

@@ -7,7 +7,6 @@ import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
 import 'package:stock/screens/screen_11.dart';
-import 'package:stock/screens/screen_6.dart';
 
 class Screen10 extends StatefulWidget {
   static const String routeName = '/screen_10';
@@ -83,11 +82,6 @@ class _Screen10State extends State<Screen10> {
             fontSize: 18,
           ),
         ),
-        suffixIcon: Icon(
-          FontAwesomeIcons.asterisk,
-          color: AppInfo.AsteriskClr,
-          size: 8,
-        ),
       ),
     ),
   );
@@ -111,25 +105,20 @@ class _Screen10State extends State<Screen10> {
       autofocus: false,
       decoration: InputDecoration(
         border: InputBorder.none,
-        focusedBorder: InputBorder.none,
-        enabledBorder: InputBorder.none,
-        focusedErrorBorder: InputBorder.none,
-        disabledBorder: InputBorder.none,
-        errorBorder: InputBorder.none,
-        contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-        hintText: En.en_ContactPerson,
-        hintStyle: GoogleFonts.roboto(
-          textStyle: TextStyle(
-            fontFamily: 'Roboto',
-            fontSize: 18,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_ContactPersonHint,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
           ),
-        ),
-        suffixIcon: Icon(
-          FontAwesomeIcons.asterisk,
-          color: AppInfo.AsteriskClr,
-          size: 8,
-        ),
-      ),
     ),
   );
 
@@ -164,11 +153,6 @@ class _Screen10State extends State<Screen10> {
             fontFamily: 'Roboto',
             fontSize: 18,
           ),
-        ),
-        suffixIcon: Icon(
-          FontAwesomeIcons.asterisk,
-          color: AppInfo.AsteriskClr,
-          size: 8,
         ),
       ),
     ),
@@ -206,11 +190,6 @@ class _Screen10State extends State<Screen10> {
             fontSize: 18,
           ),
         ),
-        suffixIcon: Icon(
-          FontAwesomeIcons.asterisk,
-          color: AppInfo.AsteriskClr,
-          size: 8,
-        ),
       ),
     ),
   );
@@ -239,20 +218,21 @@ class _Screen10State extends State<Screen10> {
         enabledBorder: InputBorder.none,
         focusedErrorBorder: InputBorder.none,
         disabledBorder: InputBorder.none,
-        errorBorder: InputBorder.none,
-        contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-        hintText: En.en_AreaHint,
-        hintStyle: GoogleFonts.roboto(
-          textStyle: TextStyle(
-            fontFamily: 'Roboto',
-            fontSize: 18,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_AreaHint,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+            suffixIcon: SvgPicture.string(
+              dropDownIcon,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
+            ),
           ),
-        ),
-        suffixIcon: Icon(
-          Icons.arrow_drop_down_outlined,
-          color: AppInfo.TextClr,
-        ),
-      ),
     ),
   );
 
@@ -280,17 +260,12 @@ class _Screen10State extends State<Screen10> {
         disabledBorder: InputBorder.none,
         errorBorder: InputBorder.none,
         contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-        hintText: En.en_PinCode,
+        hintText: En.en_PinCodeHint,
         hintStyle: GoogleFonts.roboto(
           textStyle: TextStyle(
             fontFamily: 'Roboto',
             fontSize: 18,
           ),
-        ),
-        suffixIcon: Icon(
-          FontAwesomeIcons.asterisk,
-          color: AppInfo.AsteriskClr,
-          size: 8,
         ),
       ),
     ),
@@ -298,7 +273,6 @@ class _Screen10State extends State<Screen10> {
 
 
   get _selectMarketingPersonal => Container(
-
     decoration: BoxDecoration(
       border: Border.all(width: 1.0, color: AppInfo.TextClr),
       borderRadius: BorderRadius.circular(5.0),
@@ -330,9 +304,10 @@ class _Screen10State extends State<Screen10> {
             fontSize: 18,
           ),
         ),
-        suffixIcon: Icon(
-          Icons.arrow_drop_down_outlined,
-          color: AppInfo.TextClr,
+        suffixIcon: SvgPicture.string(
+          dropDownIcon,
+          fit: BoxFit.scaleDown,
+          allowDrawingOutsideViewBox: true,
         ),
       ),
     ),
@@ -355,7 +330,7 @@ class _Screen10State extends State<Screen10> {
                 text: En.en_VSCard,
               ),
               TextSpan(
-                text: '*',
+                text: ' *',
                 style: TextStyle(
                   color: AppInfo.AsteriskClr,
                 ),

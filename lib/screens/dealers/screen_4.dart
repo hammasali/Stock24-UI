@@ -5,13 +5,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_3.dart';
+import 'package:stock/screens/dealers/screen_5.dart';
 
-class Screen2 extends StatelessWidget {
-  static const String routeName = '/screen2';
+class Screen4 extends StatefulWidget {
+  static const String routeName = '/screen4';
 
-  const Screen2({Key? key}) : super(key: key);
+  const Screen4({Key? key}) : super(key: key);
 
+  @override
+  _Screen4State createState() => _Screen4State();
+}
+
+class _Screen4State extends State<Screen4> {
   _appBar(context) => AppBar(
         backgroundColor: AppInfo.BgClr,
         elevation: 0.0,
@@ -33,7 +38,7 @@ class Screen2 extends StatelessWidget {
           ),
         ),
         title: Text(
-          En.en_Tittle2,
+          En.en_Tittle4,
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
               fontFamily: 'Roboto',
@@ -88,29 +93,33 @@ class Screen2 extends StatelessWidget {
             SizedBox(
               width: 10.0,
             ),
-            Container(
-              padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                color: AppInfo.SplashBgClr,
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0x43ffffff),
-                    offset: Offset(0, 3),
-                    blurRadius: 6,
-                  ),
-                ],
-              ),
-              child: Text(
-                En.en_AddBtn,
-                style: GoogleFonts.roboto(
-                  textStyle: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 20,
-                    color: AppInfo.SplashTxtClr,
-                  ),
+            InkWell(
+              onTap: () =>
+                  Navigator.of(context).pushNamed(Screen5.routeName),
+              child: Container(
+                padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5.0),
+                  color: AppInfo.SplashBgClr,
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x43ffffff),
+                      offset: Offset(0, 3),
+                      blurRadius: 6,
+                    ),
+                  ],
                 ),
-                textAlign: TextAlign.left,
+                child: Text(
+                  En.en_AddBtn,
+                  style: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 20,
+                      color: AppInfo.SplashTxtClr,
+                    ),
+                  ),
+                  textAlign: TextAlign.left,
+                ),
               ),
             ),
           ],
@@ -125,7 +134,7 @@ class Screen2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '${En.en_TotalPersonals}  : 19',
+              '${En.en_TotalDealers}  : 14',
               style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                   fontFamily: 'Roboto',
@@ -183,8 +192,9 @@ class Screen2 extends StatelessWidget {
                     shrinkWrap: false,
                     itemBuilder: (context, index) {
                       return GestureDetector(
-                        onTap: () =>
-                            Navigator.of(context).pushNamed(Screen3.routeName),
+                        onTap: () {
+                          /// TAP EDIT
+                        },
                         child: Container(
                           padding:
                               const EdgeInsets.all(AppInfo.kDefaultPadding),
@@ -205,7 +215,7 @@ class Screen2 extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Rohit Jain',
+                                En.en_AdvanceTrader,
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     fontFamily: 'Roboto',
@@ -219,11 +229,11 @@ class Screen2 extends StatelessWidget {
                               SizedBox(
                                 height: AppInfo.getScreenHeight(context) / 80,
                               ),
-                              containerRow(En.en_AreaSalesManager,mobile),
+                              containerRow(En.en_ContactPerson,false),
                               SizedBox(
                                 height: AppInfo.getScreenHeight(context) / 120,
                               ),
-                              containerRow(En.en_WesternLiner,whatsApp),
+                              containerRow(En.en_MobileNumber,true),
                               SizedBox(
                                 height: AppInfo.getScreenHeight(context) / 160,
                               ),
@@ -279,9 +289,9 @@ class Screen2 extends StatelessWidget {
     );
   }
 
-  Widget containerRow(String _title, String _icon) {
+  Widget containerRow(String _title, bool isPhone) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Text(
           _title,
@@ -294,28 +304,39 @@ class Screen2 extends StatelessWidget {
           ),
           textAlign: TextAlign.left,
         ),
-        Row(
-          children: [
-            SvgPicture.string(
-              _icon,
-              fit: BoxFit.scaleDown,
-              allowDrawingOutsideViewBox: true,
+        Text(
+          ':',
+          style: GoogleFonts.roboto(
+            textStyle: TextStyle(
+              fontFamily: 'Roboto',
+              fontSize: 16,
+              color: AppInfo.TextClr,
             ),
-            SizedBox(
-              width: 10.0,
+          ),
+          textAlign: TextAlign.left,
+        ),
+        Text(
+          'Data',
+          style: GoogleFonts.roboto(
+            textStyle: TextStyle(
+              fontFamily: 'Roboto',
+              fontSize: 16,
+              color: AppInfo.TextClr,
             ),
-            Text(
-              '9857484512',
-              style: GoogleFonts.roboto(
-                textStyle: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 16,
-                  color: AppInfo.TextClr,
-                ),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ],
+          ),
+          textAlign: TextAlign.left,
+        ),
+        Visibility(
+          visible: isPhone,
+          maintainAnimation: true,
+          maintainSize: true,
+          maintainState: true,
+          child: SvgPicture.string(
+            phone,
+            fit: BoxFit.scaleDown,
+            height: 20,
+            allowDrawingOutsideViewBox: true,
+          ),
         )
       ],
     );

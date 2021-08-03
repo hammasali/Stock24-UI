@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_11.dart';
+import 'package:stock/screens/sub_dealers/screen_11.dart';
 
 class Screen10 extends StatefulWidget {
   static const String routeName = '/screen_10';
@@ -498,7 +498,10 @@ class _Screen10State extends State<Screen10> {
                   ),
                   Center(
                     child: _nextBtn,
-                  )
+                  ),
+                  SizedBox(
+                    height: AppInfo.getScreenHeight(context) * 0.038,
+                  ),
                 ],
               ),
             ),

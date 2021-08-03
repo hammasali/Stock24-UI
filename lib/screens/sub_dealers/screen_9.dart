@@ -5,13 +5,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_10.dart';
+import 'package:stock/screens/sub_dealers/screen_10.dart';
 
-class Screen9 extends StatelessWidget {
+class Screen9 extends StatefulWidget {
   static const String routeName = '/screen9';
 
   const Screen9({Key? key}) : super(key: key);
 
+  @override
+  _Screen9State createState() => _Screen9State();
+}
+
+class _Screen9State extends State<Screen9> {
   _appBar(context) => AppBar(
     backgroundColor: AppInfo.BgClr,
     elevation: 0.0,
@@ -88,29 +93,33 @@ class Screen9 extends StatelessWidget {
         SizedBox(
           width: 10.0,
         ),
-        Container(
-          padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5.0),
-            color: AppInfo.SplashBgClr,
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0x43ffffff),
-                offset: Offset(0, 3),
-                blurRadius: 6,
-              ),
-            ],
-          ),
-          child: Text(
-            En.en_AddBtn,
-            style: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: AppInfo.SplashTxtClr,
-              ),
+        InkWell(
+          onTap: () =>
+              Navigator.of(context).pushNamed(Screen10.routeName),
+          child: Container(
+            padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5.0),
+              color: AppInfo.SplashBgClr,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0x43ffffff),
+                  offset: Offset(0, 3),
+                  blurRadius: 6,
+                ),
+              ],
             ),
-            textAlign: TextAlign.left,
+            child: Text(
+              En.en_AddBtn,
+              style: GoogleFonts.roboto(
+                textStyle: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 20,
+                  color: AppInfo.SplashTxtClr,
+                ),
+              ),
+              textAlign: TextAlign.left,
+            ),
           ),
         ),
       ],
@@ -182,89 +191,85 @@ class Screen9 extends StatelessWidget {
                         parent: AlwaysScrollableScrollPhysics()),
                     shrinkWrap: false,
                     itemBuilder: (context, index) {
-                      return GestureDetector(
-                        onTap: () =>
-                            Navigator.of(context).pushNamed(Screen10.routeName),
-                        child: Container(
-                          padding:
-                          const EdgeInsets.all(AppInfo.kDefaultPadding),
-                          margin: const EdgeInsets.symmetric(
-                              horizontal: AppInfo.kDefaultPadding),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: AppInfo.BgClr,
-                            boxShadow: [
-                              BoxShadow(
-                                color: const Color(0x6c6c62a3),
-                                offset: Offset(0, 3),
-                                blurRadius: 6,
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                En.en_RakeshCeramics,
-                                style: GoogleFonts.roboto(
-                                  textStyle: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    fontSize: 20,
-                                    color: AppInfo.TextClr,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                      return Container(
+                        padding:
+                        const EdgeInsets.all(AppInfo.kDefaultPadding),
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: AppInfo.kDefaultPadding),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: AppInfo.BgClr,
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0x6c6c62a3),
+                              offset: Offset(0, 3),
+                              blurRadius: 6,
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              En.en_RakeshCeramics,
+                              style: GoogleFonts.roboto(
+                                textStyle: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  fontSize: 20,
+                                  color: AppInfo.TextClr,
+                                  fontWeight: FontWeight.w500,
                                 ),
-                                textAlign: TextAlign.left,
                               ),
-                              SizedBox(
-                                height: AppInfo.getScreenHeight(context) / 80,
-                              ),
-                              containerRow(En.en_ContactPerson, false),
-                              SizedBox(
-                                height: AppInfo.getScreenHeight(context) / 120,
-                              ),
-                              containerRow(En.en_MobileNumber, true),
-                              SizedBox(
-                                height: AppInfo.getScreenHeight(context) / 160,
-                              ),
-                              Divider(),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Text(
-                                    En.en_Edit,
-                                    style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        fontSize: 16,
-                                        color: AppInfo.BtnClr2,
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                              textAlign: TextAlign.left,
+                            ),
+                            SizedBox(
+                              height: AppInfo.getScreenHeight(context) / 80,
+                            ),
+                            containerRow(En.en_ContactPerson, false),
+                            SizedBox(
+                              height: AppInfo.getScreenHeight(context) / 120,
+                            ),
+                            containerRow(En.en_MobileNumber, true),
+                            SizedBox(
+                              height: AppInfo.getScreenHeight(context) / 160,
+                            ),
+                            Divider(),
+                            Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  En.en_Edit,
+                                  style: GoogleFonts.roboto(
+                                    textStyle: TextStyle(
+                                      fontFamily: 'Roboto',
+                                      fontSize: 16,
+                                      color: AppInfo.BtnClr2,
+                                      fontWeight: FontWeight.w500,
                                     ),
-                                    textAlign: TextAlign.left,
                                   ),
-                                  SvgPicture.string(
-                                    verticalDivider,
-                                    fit: BoxFit.scaleDown,
-                                    allowDrawingOutsideViewBox: true,
-                                  ),
-                                  Text(
-                                    En.en_Delete,
-                                    style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        fontSize: 16,
-                                        color: AppInfo.BtnClr2,
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                  textAlign: TextAlign.left,
+                                ),
+                                SvgPicture.string(
+                                  verticalDivider,
+                                  fit: BoxFit.scaleDown,
+                                  allowDrawingOutsideViewBox: true,
+                                ),
+                                Text(
+                                  En.en_Delete,
+                                  style: GoogleFonts.roboto(
+                                    textStyle: TextStyle(
+                                      fontFamily: 'Roboto',
+                                      fontSize: 16,
+                                      color: AppInfo.BtnClr2,
+                                      fontWeight: FontWeight.w500,
                                     ),
-                                    textAlign: TextAlign.left,
                                   ),
-                                ],
-                              )
-                            ],
-                          ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              ],
+                            )
+                          ],
                         ),
                       );
                     },

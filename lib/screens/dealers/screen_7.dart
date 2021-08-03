@@ -6,17 +6,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_7.dart';
+import 'package:stock/screens/dealers/screen_8.dart';
 
-class Screen6 extends StatefulWidget {
-  const Screen6({Key? key}) : super(key: key);
-  static const String routeName = '/screen_6';
+class Screen7 extends StatefulWidget {
+  const Screen7({Key? key}) : super(key: key);
+  static const String routeName = '/screen_7';
 
   @override
-  _Screen6State createState() => _Screen6State();
+  _Screen7State createState() => _Screen7State();
 }
 
-class _Screen6State extends State<Screen6> {
+class _Screen7State extends State<Screen7> {
   _appBar(context) => AppBar(
         backgroundColor: AppInfo.BgClr,
         elevation: 0.0,
@@ -119,21 +119,20 @@ class _Screen6State extends State<Screen6> {
                       ],
                     ),
                   ),
-                  Container(
-                    height: 22,
-                    width: 22,
-                    decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                      color: AppInfo.BgClr,
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0x29000000),
-                          offset: Offset(0, 3),
-                          blurRadius: 6,
-                        ),
-                      ],
-                    ),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.string(
+                        progress,
+                        fit: BoxFit.scaleDown,
+                        allowDrawingOutsideViewBox: true,
+                      ),
+                      SvgPicture.string(
+                        progress2,
+                        fit: BoxFit.scaleDown,
+                        allowDrawingOutsideViewBox: true,
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -166,7 +165,6 @@ class _Screen6State extends State<Screen6> {
                       fontFamily: 'Roboto',
                       fontSize: 16,
                       color: AppInfo.TextClr,
-                      fontWeight: FontWeight.w500,
                     )),
                     textAlign: TextAlign.center,
                   ),
@@ -180,6 +178,7 @@ class _Screen6State extends State<Screen6> {
                       fontFamily: 'Roboto',
                       fontSize: 16,
                       color: AppInfo.TextClr,
+                      fontWeight: FontWeight.w500,
                     )),
                     textAlign: TextAlign.center,
                   ),
@@ -189,11 +188,16 @@ class _Screen6State extends State<Screen6> {
             SizedBox(
               height: AppInfo.getScreenHeight(context) / 40,
             ),
+            SvgPicture.string(
+              dottedLine,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
+            ),
           ],
         ),
       );
 
-  get _gstNo => Container(
+  get _bankName => Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(width: 1.0, color: AppInfo.TextClr),
@@ -217,7 +221,7 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_GSTNumHint,
+            hintText: En.en_BankNameHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -229,7 +233,7 @@ class _Screen6State extends State<Screen6> {
         ),
       );
 
-  get _panNo => Container(
+  get _branchName => Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(width: 1.0, color: AppInfo.TextClr),
@@ -253,47 +257,7 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_PANNumHint,
-            hintStyle: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 18,
-              ),
-            ),
-          ),
-        ),
-      );
-
-  get _billingAdd => Container(
-        height: 150,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0),
-          border: Border.all(width: 1.0, color: AppInfo.TextClr),
-          color: AppInfo.BgClr,
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x29000000),
-              offset: Offset(0, 3),
-              blurRadius: 6,
-            ),
-          ],
-        ),
-        child: TextField(
-          cursorColor: AppInfo.TextClr,
-          autofocus: false,
-          keyboardType: TextInputType.multiline,
-          minLines: 1,
-          //Normal textInputField will be displayed
-          maxLines: 5,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            focusedBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-            focusedErrorBorder: InputBorder.none,
-            disabledBorder: InputBorder.none,
-            errorBorder: InputBorder.none,
-            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_BillingAddressHint,
+            hintText: En.en_BranchNameHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -305,7 +269,7 @@ class _Screen6State extends State<Screen6> {
         ),
       );
 
-  get _pinCode => Container(
+  get _accountType => Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(width: 1.0, color: AppInfo.TextClr),
@@ -329,91 +293,34 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_PinCodeHint,
+            hintText: En.en_AccountTypeHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 18,
               ),
             ),
-
+            suffixIcon: SvgPicture.string(
+              dropDownIcon,
+              fit: BoxFit.scaleDown,
+              allowDrawingOutsideViewBox: true,
+            ),
           ),
         ),
       );
 
-  get _cityAndState => Row(
-        children: [
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: const Color(0x0f1b285c),
-                border: Border.all(width: 1.0, color: const Color(0x0f1b285c)),
-              ),
-              child: TextField(
-                cursorColor: AppInfo.TextClr,
-                autofocus: false,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  enabledBorder: InputBorder.none,
-                  focusedErrorBorder: InputBorder.none,
-                  disabledBorder: InputBorder.none,
-                  errorBorder: InputBorder.none,
-                  contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-                  hintText: En.en_City,
-                  hintStyle: GoogleFonts.roboto(
-                    textStyle: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 18,
-                    ),
-                  ),
-
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: AppInfo.getScreenWidth(context) * 0.028,
-          ),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: const Color(0x0f1b285c),
-                border: Border.all(width: 1.0, color: const Color(0x0f1b285c)),
-              ),
-              child: TextField(
-                cursorColor: AppInfo.TextClr,
-                autofocus: false,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  enabledBorder: InputBorder.none,
-                  focusedErrorBorder: InputBorder.none,
-                  disabledBorder: InputBorder.none,
-                  errorBorder: InputBorder.none,
-                  contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-                  hintText: En.en_State,
-                  hintStyle: GoogleFonts.roboto(
-                    textStyle: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 18,
-                    ),
-                  ),
-
-                ),
-              ),
-            ),
-          ),
-        ],
-      );
-
-  get _country => Container(
+  get _accountNumber => Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: const Color(0x0f1b285c),
-          border: Border.all(width: 1.0, color: const Color(0x0f1b285c)),
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
         ),
         child: TextField(
           cursorColor: AppInfo.TextClr,
@@ -426,7 +333,43 @@ class _Screen6State extends State<Screen6> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
-            hintText: En.en_Country,
+            hintText: En.en_AccountNumHint,
+            hintStyle: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 18,
+              ),
+            ),
+
+          ),
+        ),
+      );
+
+  get _ifscCode => Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          border: Border.all(width: 1.0, color: AppInfo.TextClr),
+          color: AppInfo.BgClr,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0x29000000),
+              offset: Offset(0, 3),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          cursorColor: AppInfo.TextClr,
+          autofocus: false,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            focusedErrorBorder: InputBorder.none,
+            disabledBorder: InputBorder.none,
+            errorBorder: InputBorder.none,
+            contentPadding: const EdgeInsets.all(AppInfo.kDefaultPadding),
+            hintText: En.en_IFCSCodeHint,
             hintStyle: GoogleFonts.roboto(
               textStyle: TextStyle(
                 fontFamily: 'Roboto',
@@ -476,7 +419,7 @@ class _Screen6State extends State<Screen6> {
           ),
           Expanded(
             child: InkWell(
-              onTap: () => Navigator.of(context).pushNamed(Screen7.routeName),
+              onTap: () => Navigator.of(context).pushNamed(Screen8.routeName),
               child: Container(
                 padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
                 decoration: BoxDecoration(
@@ -518,33 +461,28 @@ class _Screen6State extends State<Screen6> {
             child: Container(
               margin: const EdgeInsets.all(AppInfo.kDefaultPadding),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _progress,
                   SizedBox(
                     height: AppInfo.getScreenHeight(context) * 0.02,
                   ),
-                  _gstNo,
+                  _bankName,
                   SizedBox(
                     height: AppInfo.getScreenHeight(context) * 0.028,
                   ),
-                  _panNo,
+                  _branchName,
                   SizedBox(
                     height: AppInfo.getScreenHeight(context) * 0.028,
                   ),
-                  _billingAdd,
+                  _accountType,
                   SizedBox(
                     height: AppInfo.getScreenHeight(context) * 0.028,
                   ),
-                  _pinCode,
+                  _accountNumber,
                   SizedBox(
                     height: AppInfo.getScreenHeight(context) * 0.028,
                   ),
-                  _cityAndState,
-                  SizedBox(
-                    height: AppInfo.getScreenHeight(context) * 0.028,
-                  ),
-                  _country,
+                  _ifscCode,
                   SizedBox(
                     height: AppInfo.getScreenHeight(context) * 0.028,
                   ),

@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_9.dart';
+import 'package:stock/screens/sub_dealers/screen_9.dart';
 
 class Screen8 extends StatefulWidget {
   const Screen8({Key? key}) : super(key: key);
@@ -91,7 +91,9 @@ class _Screen8State extends State<Screen8> {
       ),
       Expanded(
         child: InkWell(
-          onTap: () => Navigator.of(context).pushNamed(Screen9.routeName),
+          onTap: () {
+            ///EDIT
+          },
           child: Container(
             padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
             decoration: BoxDecoration(
@@ -144,6 +146,9 @@ class _Screen8State extends State<Screen8> {
                   height: AppInfo.getScreenHeight(context) * 0.028,
                 ),
                 _buttons,
+                SizedBox(
+                  height: AppInfo.getScreenHeight(context) * 0.038,
+                ),
               ],
             ),
           ),

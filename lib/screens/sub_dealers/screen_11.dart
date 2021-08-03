@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_12.dart';
 
 class Screen11 extends StatefulWidget {
   const Screen11({Key? key}) : super(key: key);
@@ -120,7 +119,9 @@ class _Screen11State extends State<Screen11> {
       );
 
   get _buttons => InkWell(
-      onTap: () => Navigator.of(context).pushNamed(Screen12.routeName),
+      onTap: () {
+        ///EDIT
+      },
       child: Container(
         width: AppInfo.getScreenWidth(context) / 2,
         padding: const EdgeInsets.all(AppInfo.kDefaultPadding),
@@ -179,6 +180,9 @@ class _Screen11State extends State<Screen11> {
                   height: AppInfo.getScreenHeight(context) * 0.028,
                 ),
                 _buttons,
+                SizedBox(
+                  height: AppInfo.getScreenHeight(context) * 0.038,
+                ),
               ],
             ),
           ),
@@ -233,14 +237,14 @@ class _Screen11State extends State<Screen11> {
           ]),
           DataRow(cells: [
             DataCell(FittedBox(
-                fit: BoxFit.scaleDown, child: Text(En.en_WhatsappHint))),
+                fit: BoxFit.scaleDown, child: Text(En.en_WhatsAppNumber))),
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),
           ]),
           DataRow(cells: [
             DataCell(
-                FittedBox(fit: BoxFit.scaleDown, child: Text(En.en_AreaHint))),
+                FittedBox(fit: BoxFit.scaleDown, child: Text(En.en_Area))),
             DataCell(
                 FittedBox(fit: BoxFit.scaleDown, child: Text(':  Data...'))),
             DataCell(Text('')),

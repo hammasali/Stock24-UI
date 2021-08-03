@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_4.dart';
 
 class Screen3 extends StatelessWidget {
   static const String routeName = '/screen3';
@@ -289,25 +288,26 @@ class Screen3 extends StatelessWidget {
       child: Scaffold(
         appBar: _appBar(context),
         body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    _nameField,
-                    _designation,
-                    _mobileNum,
-                    _whatsappNum,
-                    _area,
-                  ],
-                ),
-                GestureDetector(
-                  onTap: () => Navigator.of(context).pushNamed(Screen4.routeName),
-                  child: _saveBtn,
-                ),
-              ],
-            ),
+          child: Column(
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  _nameField,
+                  _designation,
+                  _mobileNum,
+                  _whatsappNum,
+                  _area,
+                ],
+              ),
+              Spacer(),
+              GestureDetector(
+                onTap: () {},
+                child: _saveBtn,
+              ),
+              SizedBox(
+                height: AppInfo.getScreenHeight(context) * 0.038,
+              ),
+            ],
           ),
         ),
       ),

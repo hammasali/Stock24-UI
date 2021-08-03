@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:stock/screens/auth_screens/auth_screen1.dart';
-import 'package:stock/screens/screen_1.dart';
-import 'package:stock/screens/screen_10.dart';
-import 'package:stock/screens/screen_11.dart';
-import 'package:stock/screens/screen_12.dart';
-import 'package:stock/screens/screen_13.dart';
-import 'package:stock/screens/screen_14.dart';
-import 'package:stock/screens/screen_2.dart';
-import 'package:stock/screens/screen_3.dart';
-import 'package:stock/screens/screen_4.dart';
-import 'package:stock/screens/screen_5.dart';
-import 'package:stock/screens/screen_6.dart';
-import 'package:stock/screens/screen_7.dart';
-import 'package:stock/screens/screen_8.dart';
-import 'package:stock/screens/screen_9.dart';
+import 'package:stock/screens/home/screen_1.dart';
+import 'package:stock/screens/sub_dealers/screen_10.dart';
+import 'package:stock/screens/sub_dealers/screen_11.dart';
+import 'package:stock/screens/products/screen_12.dart';
+import 'package:stock/screens/orders/screen_13.dart';
+import 'package:stock/screens/orders/screen_14.dart';
+import 'package:stock/screens/marketing_personal/screen_2.dart';
+import 'package:stock/screens/marketing_personal/screen_3.dart';
+import 'package:stock/screens/dealers/screen_4.dart';
+import 'package:stock/screens/dealers/screen_5.dart';
+import 'package:stock/screens/dealers/screen_6.dart';
+import 'package:stock/screens/dealers/screen_7.dart';
+import 'package:stock/screens/dealers/screen_8.dart';
+import 'package:stock/screens/sub_dealers/screen_9.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings routeSettings) {

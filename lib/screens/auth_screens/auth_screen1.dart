@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_1.dart';
+import 'package:stock/screens/home/screen_1.dart';
 
 class AuthScreen1 extends StatefulWidget {
   static const String routeName = '/';

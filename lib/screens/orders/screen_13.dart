@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_14.dart';
+import 'package:stock/screens/orders/screen_14.dart';
 
 class Screen13 extends StatefulWidget {
   static const String routeName = '/screen_13';

@@ -7,7 +7,7 @@ import 'package:stock/business_logic/cubit/counter_cubit.dart';
 import 'package:stock/core/app_info.dart';
 import 'package:stock/core/language_literals.dart';
 import 'package:stock/core/svgs.dart';
-import 'package:stock/screens/screen_13.dart';
+import 'package:stock/screens/orders/screen_13.dart';
 
 class Screen12 extends StatefulWidget {
   static const String routeName = '/screen_12';
@@ -137,7 +137,7 @@ class _Screen12State extends State<Screen12> {
           shrinkWrap: false,
           children: List.generate(6, (index) {
             return InkWell(
-              onTap: () => Navigator.of(context).pushNamed(Screen13.routeName),
+              onTap: () {},
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

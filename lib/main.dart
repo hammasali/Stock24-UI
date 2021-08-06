@@ -34,7 +34,7 @@ class App extends StatelessWidget {
 
 class MyApp extends StatelessWidget {
   final AppRoutes _appRoutes = AppRoutes();
-//
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

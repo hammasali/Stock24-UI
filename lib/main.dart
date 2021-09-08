@@ -52,6 +52,6 @@ class MyApp extends StatelessWidget {
         splashTransition: SplashTransition.sizeTransition,
       ),
     );
-    //j
+
   }
 }

@@ -34,8 +34,7 @@ class App extends StatelessWidget {
 
 class MyApp extends StatelessWidget {
   final AppRoutes _appRoutes = AppRoutes();
-
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Stock App',
@@ -53,5 +52,6 @@ class MyApp extends StatelessWidget {
         splashTransition: SplashTransition.sizeTransition,
       ),
     );
+    //j
   }
 }
